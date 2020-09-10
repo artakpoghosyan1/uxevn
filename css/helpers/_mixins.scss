@@ -1,0 +1,185 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin box-sizing($value) {
+  -webkit-box-sizing: $value;
+  -moz-box-sizing: $value;
+  box-sizing: $value;
+}
+
+@mixin box-shadow($value...) {
+  -webkit-box-shadow: $value;
+  -moz-box-shadow: $value;
+  box-shadow: $value;
+}
+
+@mixin animation($name, $value) {
+  -webkit-animation-name: $name;
+  -webkit-animation-duration: $value;
+  animation-name: $name;
+  animation-duration: $value;
+}
+
+@mixin transform($value...) {
+  -ms-transform: $value;
+  -webkit-transform: $value;
+  transform: $value;
+}
+
+@mixin transition($args...) {
+  -webkit-transition: ($args);
+  -ms-transition: ($args);
+  -moz-transition: ($args);
+  transition: ($args);
+}
+
+@mixin align-items($value) {
+  -webkit-align-items: $value;
+  align-items: $value;
+}
+
+@mixin align-self($value) {
+  -webkit-align-self: $value;
+  align-self: $value;
+}
+
+@mixin justify-content($value) {
+  -webkit-justify-content: $value;
+  justify-content: $value;
+}
+
+@mixin justify-self($value) {
+  -webkit-justify-self: $value;
+  justify-self: $value;
+}
+
+@mixin flex-wrap($value) {
+  -webkit-flex-wrap: $value;
+  flex-wrap: $value;
+}
+
+@mixin appearance($value) {
+  -webkit-appearance: $value;
+  -moz-appearance: $value;
+  appearance: $value;
+}
+
+@mixin linear-gradient($args...) {
+  background-image: -o-linear-gradient($args);
+  background-image: -moz-linear-gradient($args);
+  background-image: -webkit-linear-gradient($args);
+  background-image: linear-gradient($args);
+}
+
+@mixin text-overflow($value) {
+  -ms-text-overflow: $value;
+  text-overflow: $value;
+}
+
+
+
+@function define-max($n) {
+  @for $i from 1 through 51 {
+    @if $i * $n > 50 {
+      @return $i - 1;
+    }
+  }
+}
+
+/**
+ * Returns a list of N values based on a list of colors
+ * knowing N % $colors length has to be equals to 0 (to make the loop loops)
+ * and N can't be greater than 50 (number of keyframes)
+ * $colors: list of colors to be used
+ */
+@function create-list($colors) {
+  $a: define-max( length($colors) );
+  $l: ();
+  @each $c in $colors {
+    @for $i from 1 through $a {
+      $l: append($l, $c);
+    }
+  }
+  @return $l;
+}
+
+/**
+ * Mixin outputing a crapload of text-shadows (50 actually)
+ * $hue: starting hue
+ */
+@mixin text-3d($hue: 0) {
+  $ts: ();
+  @for $i from 1 through 50 {
+    $ts: $ts, $i*2px $i*2px hsl($hue + $i*1, 100%, 50% - $i);
+  }
+  text-shadow: $ts, 0 0 50px, 0 0 55px;
+}
+
+/**
+ * Mixin outputing a crapload of text-shadows (based on given list of colors)
+ * Used for animated hover
+ * $index: index of the color list at which the first text-shadow will start
+ * $cols: list of colors
+ */
+@mixin crazy-rainbow($n, $colors) {
+  $ts: ();
+  $colors: create-list($colors);
+
+  @for $i from 1 through length($colors) {
+    $n: if($n > length($colors) or $n == 0, 1, $n);
+
+    $ts: $ts, $i*2px $i*2px 0 nth($colors, $n);
+
+    $n: $n + 1;
+  }
+
+  text-shadow: $ts;
+}
+
+/**
+ * Mixin to metafizzy a text
+ * $size: font-size used
+ * $duration: color-changing animation duration
+ */
+@mixin metafizzy($size, $duration: 20s) {
+  color: $black;
+  font-size: $size;
+  animation: crazy-rainbow-animation $duration linear infinite;
+  animation-direction: reverse;
+}
+
+/**
+ * Mixin generating keyframes for animations
+ * Outputing a crapload of text shadows
+ */
+@mixin metafizzy-animations($hover-colors) {
+  /**
+   * Rainbow animation, changing color smoothly
+   */
+  @keyframes text-3d-animation {
+    @for $i from 0 through 10 {
+      #{$i*10%} {
+        @include text-3d($i * 36);
+      }
+    }
+  }
+
+  /**
+   * Hover epiphany
+   */
+  @keyframes crazy-rainbow-animation {
+    0% {
+      @include crazy-rainbow(50, $hover-colors);
+    }
+    @for $i from 1 through 50 {
+      #{$i*2%} {
+        @include crazy-rainbow($i, $hover-colors);
+      }
+    }
+  }
+}
+
+@include metafizzy-animations($blue $purple $pink);

@@ -1,0 +1,567 @@
+.page-wrapper {
+  height: 100vh;
+
+  &__fixed {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+
+.wrapper-section {
+  $this: &;
+
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: $white;
+
+  &--main {
+    background-color: transparent;
+  }
+  &--dark {
+    @extend .bg-dark;
+
+    .title {
+      font-family: primary-semibold;
+    }
+  }
+  &__inner {
+    padding-left: 156px;
+    min-height: 100vh;
+  }
+  &__top {
+    @extend .flex;
+    padding: 70px 60px 0 130px;
+    margin-bottom: 50px;
+    @include align-items(center);
+    @include justify-content(space-between);
+  }
+
+  &--contact {
+    #{$this}__inner {
+      @extend .flex;
+      @include flex-wrap(wrap);
+
+      >div {
+        flex: 100%;
+      }
+    }
+  }
+}
+
+$inner-width: 1100px;
+
+.inner-wrapper {
+  padding: 0 40px 60px 130px;
+  max-width: $inner-width + 170px;
+
+  &--sm {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.scroll {
+  overflow: hidden;
+  overflow-y: auto;
+  margin-right: 2px;
+  padding-right: 2px;
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    @include border-radius(2px);
+  }
+}
+
+.title {
+  font-family: primary-bold;
+
+  &--primary {
+    font-size: 60px;
+    text-transform: capitalize;
+  }
+
+  &--secondary {
+    font-size: 30px;
+    text-transform: uppercase;
+  }
+
+  &--tertiary {
+    font-size: 22px;
+  }
+}
+
+.text-box {
+  font-size: 22px;
+  line-height: 33px;
+
+  p {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 20px;
+    }
+
+    strong {
+      font-family: primary-bold;
+    }
+  }
+}
+
+.form {
+  $this: &;
+
+  &__row {
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__row-sm {
+    margin-bottom: 12px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    #{$this}__col {
+      margin-right: 10px;
+    }
+  }
+
+  &__col {
+    flex: 1;
+    margin-right: 24px;
+
+    &:last-child {
+      margin-right: 0 !important;
+    }
+  }
+
+  &__button {
+    margin-top: 40px;
+  }
+}
+
+.social-list {
+  li {
+    margin-right: 32px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a {
+      color: $black;
+      font-size: 24px;
+      line-height: 0;
+      @include transition(opacity 0.3s);
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+}
+
+.twits-wrapper, .banner {
+  background-color: $white;
+  padding: 50px 0 0 156px;
+
+  &__inner {
+    max-width: initial;
+    padding-right: 0 !important;
+  }
+}
+
+.twits-carousel {
+  &__item {
+    @extend .flex;
+    @extend .bg-dark;
+    color: $white;
+    padding: 16px 24px;
+    cursor: pointer;
+    margin-right: 40px;
+    @include border-radius(4px);
+    @include flex-wrap(wrap);
+  }
+
+  &__img {
+    min-width: 50px;
+    max-width: 50px;
+    height: 50px;
+    @include border-radius(50%);
+  }
+
+  a {
+    color: $blue;
+    font-family: primary-bold;
+  }
+
+  &__info {
+    margin-top: -30px;
+    line-height: 24px;
+    padding-left: 60px;
+
+    >span {
+      display: block;
+      font-size: 18px;
+    }
+  }
+
+  &__top {
+    flex: 1;
+    padding-left: 10px;
+    padding-bottom: 30px;
+    width: calc(100% - 50px);
+    width: -webkit-calc(100% - 50px);
+    width: -moz-calc(100% - 50px);
+
+    >span {
+      font-size: 14px;
+
+      &:last-child {
+        white-space: nowrap;
+        position: relative;
+        padding-left: 15px;
+
+        &:after {
+          content: "\e907";
+          font-size: 1px;
+          font-family: icomoon;
+          position: absolute;
+          left: 3px;
+          top: 50%;
+          @include transform(translateY(-50%));
+        }
+      }
+    }
+  }
+}
+
+.banner {
+  &__inner {
+    padding-bottom: 50px;
+  }
+
+  &__title {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  &__img {
+    width: 220px;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.view-more {
+  $this: &;
+
+  font-size: 20px;
+  padding-right: 50px;
+  position: relative;
+  text-transform: uppercase;
+  font-family: primary-bold;
+
+  &:hover {
+    #{$this}__text {
+      &:after {
+        width: 100%;
+      }
+    }
+  }
+
+  &__text {
+    position: relative;
+
+    &:after {
+      content: '';
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      position: absolute;
+      background-color: $black;
+      @include transition(width 0.3s);
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    line-height: 0;
+    right: 0;
+    font-size: 28px;
+    @include transform(translateY(-50%));
+  }
+}
+
+sup {
+  vertical-align: middle;
+}
+
+.show-for-tablet, .show-for-mobile, .show-for-sm-mobile {
+  display: none !important;
+}
+
+
+@media (max-width: 1440px) {
+  .wrapper-section {
+    &__top {
+      padding: 60px 60px 0 100px;
+      margin-bottom: 40px;
+    }
+  }
+  .inner-wrapper {
+    padding: 0 100px 60px;
+
+    &--sm {
+      padding-top: 30px !important;
+      padding-bottom: 30px !important;
+    }
+  }
+
+  .title {
+    &--primary {
+      font-size: 50px;
+    }
+
+    &--secondary {
+      font-size: 26px;
+    }
+
+    &--tertiary {
+      font-size: 20px;
+    }
+  }
+
+  .text-box {
+    font-size: 20px;
+    line-height: 31px;
+
+    p {
+      margin-bottom: 24px;
+    }
+  }
+
+  .social-list {
+    a {
+      font-size: 20px;
+    }
+  }
+
+  .twits-carousel {
+    &__item {
+      margin-right: 30px;
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .wrapper-section {
+    &__inner {
+      padding-left: 100px;
+    }
+
+    &__top {
+      padding: 40px 80px 0;
+      margin-bottom: 30px;
+    }
+  }
+
+  .inner-wrapper {
+    padding: 0 80px 40px;
+
+    &--sm {
+      padding-top: 20px !important;
+      padding-bottom: 20px !important;
+    }
+  }
+
+  .twits-wrapper, .banner {
+    padding: 40px 0 0 100px;
+  }
+
+  .title {
+    &--primary {
+      font-size: 40px;
+    }
+  }
+
+  .text-box {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .scrollbar {
+    left: 100px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .wrapper-section {
+    &__top {
+      padding: 30px 40px 0;
+      margin-bottom: 20px;
+    }
+  }
+  .inner-wrapper {
+    padding: 0 40px 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .hide-for-tablet {
+    display: none !important;
+  }
+
+  .show-for-tablet {
+    display: block !important;
+  }
+
+  .wrapper-section {
+    padding-top: 60px;
+
+    &__inner {
+      padding-left: 0;
+    }
+  }
+
+  .twits-wrapper, .banner {
+    padding-left: 0;
+  }
+
+  .title {
+    &--primary {
+      font-size: 30px;
+    }
+    &--secondary {
+      font-size: 24px;
+    }
+  }
+
+  .twits-carousel {
+    &__item {
+      padding: 18px;
+      margin-right: 20px;
+    }
+  }
+
+  .social-list {
+    li {
+      margin-right: 20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hide-for-mobile {
+    display: none !important;
+  }
+  .show-for-mobile {
+    display: block !important;
+  }
+
+  .wrapper-section {
+    &__top {
+      padding: 20px 20px 0;
+    }
+  }
+
+  .inner-wrapper {
+    padding: 0 20px 20px;
+  }
+
+  .twits-wrapper {
+    &__inner {
+      padding-bottom: 0;
+    }
+  }
+
+  .banner {
+    &__inner {
+      padding-bottom: 40px;
+    }
+  }
+
+  .twits-carousel {
+    &__top {
+      >span {
+        display: block;
+
+        &:last-child {
+          padding-left: 0;
+          margin-top: 5px;
+
+          &:after {
+            content: none;
+          }
+        }
+      }
+    }
+
+    &__info {
+      padding-left: 0;
+      margin-top: 0;
+    }
+  }
+  .social-list {
+    li {
+      margin-right: 22px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .hide-for-sm-mobile {
+    display: none !important;
+  }
+
+  .show-for-sm-mobile {
+    display: block !important;
+  }
+
+  .wrapper-section {
+    &--secondary {
+      padding-bottom: 80px;
+      position: relative;
+    }
+  }
+
+  .form {
+    &__col {
+      flex: 100%;
+      margin-right: 0;
+      margin-bottom: 24px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__button {
+      margin-top: 20px;
+      width: 100%;
+    }
+  }
+}

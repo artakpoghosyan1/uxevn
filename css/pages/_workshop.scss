@@ -1,0 +1,113 @@
+
+/* Workshop */
+
+.about-workshop {
+  margin-top: 30px;
+
+  &__item {
+    @extend .flex;
+    @include flex-wrap(wrap);
+    margin-bottom: 70px;
+  }
+
+  &__image {
+    width: 30%;
+    max-width: 290px;
+    min-height: 320px;
+    max-height: 320px;
+  }
+
+  &__description {
+    width: 70%;
+    padding-left: 45px;
+    padding-top: 10px;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-family: primary-black;
+    text-transform: uppercase;
+  }
+
+  &__subtitle, &__text {
+    font-size: 22px;
+    line-height: 33px;
+  }
+
+  &__text {
+    margin-bottom: 40px;
+  }
+
+  &__subtitle {
+    margin: 25px 0;
+    font-family: primary-semibold;
+  }
+}
+
+@media (max-width: 1440px) {
+  .about-workshop {
+    &__title {
+      font-size: 22px;
+    }
+    &__subtitle, &__text {
+      font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .about-workshop {
+    &__item {
+      margin-bottom: 50px;
+    }
+    &__image {
+      width: 35%;
+      min-height: 280px;
+    }
+    &__description {
+      width: 65%;
+      padding-left: 30px;
+    }
+
+    &__subtitle, &__text {
+      font-size: 18px;
+    }
+    &__title {
+      font-size: 20px;
+    }
+    &__subtitle {
+      margin: 20px 0;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .about-workshop {
+    &__item {
+      margin-bottom: 40px;
+    }
+    &__image {
+      width: 50%;
+      padding-top: 60%;
+      margin: 0 0 20px;
+      min-height: auto;
+    }
+    &__description {
+      width: 100%;
+      padding-left: 0;
+    }
+    &__subtitle, &__text {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .about-workshop {
+    &__image {
+      width: 100%;
+      max-width: initial;
+      padding-top: 100%;
+    }
+  }
+}

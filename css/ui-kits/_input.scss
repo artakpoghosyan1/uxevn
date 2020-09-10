@@ -1,0 +1,108 @@
+.def-input {
+  $this: &;
+
+  position: relative;
+
+  input {
+    border: 0;
+    width: 100%;
+    height: 60px;
+    font-size: 22px;
+    padding-top: 12px;
+    color: $black;
+    font-family: primary;
+    background-color: transparent;
+    border-bottom: 1px solid rgba($black, 0.1);
+    @include transition(border-color 0.3s);
+
+    &::-webkit-input-placeholder {
+      color: rgba($black, 0.3);
+    }
+    &::-moz-placeholder {
+      color: rgba($black, 0.3);
+    }
+    &:-moz-placeholder {
+      color: rgba($black, 0.3);
+    }
+    &:-ms-input-placeholder {
+      color: rgba($black, 0.3);
+    }
+
+    & + span {
+      display: block;
+      position: relative;
+
+      &:after {
+        content: '';
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 1px;
+        position: absolute;
+        background-color: $black;
+        @include transition(width 0.3s);
+      }
+    }
+
+    &:focus {
+      & + span {
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-family: primary-bold;
+    color: $black;
+    @include transition(top 0.3s, font-size 0.3s, opacity 0.3s);
+  }
+
+  &--secondary {
+    input {
+      color: $white;
+      border-bottom-color: rgba($white, 0.2);
+
+      &::-webkit-input-placeholder {
+        color: rgba($white, 0.3);
+      }
+      &::-moz-placeholder {
+        color: rgba($white, 0.3);
+      }
+      &:-moz-placeholder {
+        color: rgba($white, 0.3);
+      }
+      &:-ms-input-placeholder {
+        color: rgba($white, 0.3);
+      }
+
+      & + span {
+        &:after {
+          background-color: $white;
+        }
+      }
+    }
+
+    #{$this}__label {
+      color: $white;
+    }
+  }
+}
+
+@media (max-width: 992px){
+  .def-input {
+    input {
+      & + span {
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

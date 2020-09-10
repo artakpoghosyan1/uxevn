@@ -1,0 +1,42 @@
+.dark-theme {
+  .header {
+    &__title, &__date {
+      color: $black;
+    }
+
+    .logo {
+      a{
+        color: $black;
+      }
+    }
+
+    .menu-list {
+      background-color: rgba($black, 0.1);
+
+      a {
+        &:before {
+          background-color: $black;
+        }
+      }
+    }
+  }
+
+  .logo-text {
+    color: $black;
+  }
+
+  .nav-button {
+    &:before, &:after, &__inner {
+      background-color: $black;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .dark-theme {
+    .header {
+      background-color: $white;
+      border-bottom-color: rgba($black,0.1);
+    }
+  }
+}

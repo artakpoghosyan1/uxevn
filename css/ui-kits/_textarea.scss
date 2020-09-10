@@ -1,0 +1,142 @@
+.def-textarea {
+  $this: &;
+
+  position: relative;
+
+  textarea {
+    border: 0;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 120px;
+    min-height: 40px;
+    font-size: 22px;
+    margin-top: 20px;
+    color: $black;
+    font-family: primary;
+    background-color: transparent;
+    border-bottom: 1px solid rgba($black, 0.1);
+    @include transition(border-color 0.3s);
+
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    &::-webkit-scrollbar {
+      width: 4px;
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba($black, 0.4);
+      @include border-radius(2px);
+    }
+
+    &::-webkit-input-placeholder {
+      color: rgba($black, 0.3);
+    }
+    &::-moz-placeholder {
+      color: rgba($black, 0.3);
+    }
+    &:-moz-placeholder {
+      color: rgba($black, 0.3);
+    }
+    &:-ms-input-placeholder {
+      color: rgba($black, 0.3);
+    }
+
+    & + span {
+      display: block;
+      position: relative;
+
+      &:after {
+        content: '';
+        bottom: 4px;
+        left: 0;
+        width: 0;
+        height: 1px;
+        position: absolute;
+        background-color: $black;
+        @include transition(width 0.3s);
+      }
+    }
+
+    &:focus {
+      & + span {
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-family: primary-bold;
+    color: $black;
+    @include transition(top 0.3s, font-size 0.3s, opacity 0.3s);
+  }
+
+  &--secondary {
+    textarea {
+      color: $white;
+      border-bottom-color: rgba($white, 0.2);
+
+      &::-webkit-input-placeholder {
+        color: rgba($white, 0.3);
+      }
+      &::-moz-placeholder {
+        color: rgba($white, 0.3);
+      }
+      &:-moz-placeholder {
+        color: rgba($white, 0.3);
+      }
+      &:-ms-input-placeholder {
+        color: rgba($white, 0.3);
+      }
+
+      & + span {
+        &:after {
+          background-color: $white;
+        }
+      }
+    }
+
+    #{$this}__label {
+      color: $white;
+    }
+  }
+}
+
+
+
+@media (max-width: 992px){
+  .def-textarea {
+    textarea {
+      & + span {
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .def-textarea {
+    textarea {
+      min-height: 80px;
+      font-size: 18px;
+    }
+
+    &__label {
+      font-size: 12px;
+    }
+  }
+}

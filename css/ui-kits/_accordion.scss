@@ -1,0 +1,101 @@
+.accordion {
+  $this: &;
+  color: $white;
+
+  &__row {
+    @extend .flex;
+    padding: 24px 0;
+    opacity: 0.4;
+    border-bottom: 1px solid $white;
+    @include flex-wrap(wrap);
+    @include transition(opacity 0.3s);
+    
+    &:hover {
+      cursor: pointer;
+      opacity: 1;
+    }
+
+    &.active {
+      opacity: 1;
+
+      #{$this}__action {
+        i {
+          &:before {
+            content: '\e90f' !important;
+          }
+        }
+      }
+    }
+  }
+
+  &__title {
+    flex: 0.7;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: primary-semibold;
+    text-transform: uppercase;
+
+    p {
+      width: 80%;
+    }
+  }
+
+  &__description {
+    flex: 1;
+    padding: 0 40px;
+    font-size: 24px;
+    line-height: 34px;
+    max-height: 68px;
+    overflow: hidden;
+    font-family: primary-light;
+    @include transition(max-height 0.3s ease-out);
+  }
+
+  &__action {
+    padding-top: 15px;
+    font-size: 32px;
+  }}
+
+@media (max-width: 1440px) {
+  .accordion {
+    &__description {
+      font-size: 22px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .accordion {
+    &__row {
+      opacity: 1;
+    }
+    &__description {
+      font-size: 20px;
+      line-height: 28px;
+      max-height: 56px;
+    }
+    &__action {
+      font-size: 28px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .accordion {
+    &__title {
+      order: 0;
+      flex: 1;
+    }
+    &__action {
+      order: 1;
+      padding-top: 0;
+      font-size: 24px;
+    }
+    &__description {
+      flex: 100%;
+      order: 2;
+      margin-top: 20px;
+      padding: 0;
+    }
+  }
+}

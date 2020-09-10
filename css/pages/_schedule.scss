@@ -1,0 +1,324 @@
+/* Schedule */
+
+.progress {
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin-top: 20px;
+  border-radius: 2px;
+  overflow: hidden;
+  background-color: rgba($white,0.2);
+  background-repeat: no-repeat ;
+  background-size: 0 100%;
+  @include linear-gradient(to right, $white, $white);
+  @include transition(background-size .4s ease-in-out);
+}
+
+.schedule-wrapper {
+  &__date {
+    font-size: 20px;
+  }
+
+  .inner-wrapper {
+    max-width: initial;
+    padding-right: 0;
+  }
+}
+
+$day-box-size: 66px;
+
+.schedule-list {
+  $this: &;
+
+  @extend .flex;
+  margin: 40px 0;
+  width: 100%;
+
+  &__right {
+    min-width: 1px;
+    padding-left: 24px;
+  }
+
+  &__day {
+    font-size: 22px;
+    height: $day-box-size;
+    width: $day-box-size;
+    line-height: $day-box-size + 2;
+    display: block;
+    text-align: center;
+    background-color: $pink;
+    color: $white;
+    font-family: primary-semibold;
+  }
+
+  &--secondary {
+    max-width: 1110px;
+
+    #{$this}__day {
+      background-color: $blue;
+    }
+
+    #{$this}__right {
+      @extend .flex;
+
+      >div {
+        &:first-child {
+          width: calc(100% - 220px);
+        }
+
+        &:last-child {
+          width: 270px;
+          padding-left: 30px;
+        }
+      }
+    }
+
+    #{$this}__items {
+      @extend .flex;
+      @include flex-wrap(wrap);
+    }
+
+    #{$this}__item {
+      margin-right: 20px;
+      margin-bottom: 20px;
+      max-width: 240px;
+      min-width: 240px;
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+
+    .schedule-carousel {
+      .slick-slide {
+        >div {
+          flex: 100%;
+          height: calc(100%/2 - 10px);
+          height: -webkit-calc(100%/2 - 10px);
+          height: -moz-calc(100%/2 - 10px);
+          margin-bottom: 20px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.schedule-carousel {
+  .slick-track {
+    @extend .flex;
+    @include align-items(stretch);
+  }
+  .slick-slide {
+    float: initial;
+    height: initial;
+    margin-right: 20px;
+    max-width: 240px;
+    min-width: 240px;
+    @extend .flex;
+    @include flex-wrap(wrap);
+
+    >div {
+      flex: 100%;
+    }
+  }
+}
+
+.schedule-box {
+  $this: &;
+
+  @extend .flex;
+  background-color: #1C1C1C;
+  height: 100%;
+  color: $white;
+  @include flex-wrap(wrap);
+
+  &:not(&--secondary) {
+    >div {
+      padding: 18px;
+      flex: 100%;
+
+      &:last-child {
+        border-top: 1px solid #171717;
+        margin-top: auto;
+        min-height: 100px;
+      }
+    }
+  }
+
+  &__title, &__time {
+    @extend .flex;
+
+    >span {
+      &:last-child {
+        padding-left: 10px;
+        flex: 1;
+      }
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 16px;
+
+    >span {
+      &:first-child {
+        padding-top: 4px;
+      }
+    }
+  }
+
+  &__time {
+    font-size: 16px;
+  }
+
+  &__icon {
+    width: 20px;
+    font-size: 20px;
+    line-height: 0;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &--secondary {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #363434;
+    background-color: transparent;
+    @include align-items(center);
+    @include justify-content(center);
+
+    #{$this}__icon {
+      width: auto;
+      font-size: 60px;
+    }
+
+    #{$this}__title {
+      margin-bottom: 0;
+      margin-top: 24px;
+    }
+  }
+}
+
+.timzone-block {
+  &__title {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .timzone-block {
+    &__title {
+      font-size: 34px;
+    }
+  }
+}
+
+@media (max-width: 1420px) {
+  .schedule-list {
+    $this: &;
+
+    &--secondary {
+      max-width: 850px;
+
+
+      #{$this}__item {
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+        &:nth-child(2n + 1) {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .schedule-carousel {
+    .slick-slide {
+      margin-right: 20px;
+    }
+  }
+  .schedule-list {
+    $this: &;
+
+    &--secondary {
+      #{$this}__right {
+        >div {
+          &:first-child {
+            width: calc(100% - 260px);
+          }
+
+          &:last-child {
+            width: 270px;
+            padding-left: 30px;
+          }
+        }
+      }
+
+      #{$this}__item {
+        height: 100%;
+        margin-bottom: 0;
+
+        &:nth-child(2n + 1) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .timzone-block {
+    &__title {
+      font-size: 30px;
+    }
+  }
+}
+
+@media (max-width: 940px) {
+  .schedule-list {
+    $this: &;
+
+
+    &--secondary {
+      max-width: initial;
+
+      #{$this}__right {
+        @include flex-wrap(wrap);
+
+        >div {
+          width: 100% !important;
+          flex: 100%;
+
+          &:last-child {
+            margin-top: 40px;
+            padding-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .schedule-list {
+    @include flex-wrap(wrap);
+
+    >div {
+      flex: 100%;
+    }
+
+    &__right {
+      margin-top: 20px;
+      padding-left: 0;
+    }
+  }
+}
+

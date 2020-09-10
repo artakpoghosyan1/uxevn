@@ -1,0 +1,558 @@
+
+/* Buy Tickets */
+
+.ticket-wrapper {
+  &__form {
+    margin-top: 60px;
+    padding: 50px 0;
+    background-color: $grey-light;
+  }
+
+  .marquee {
+    padding: 18px 0;
+    overflow: hidden;
+    font-family: primary-bold;
+    text-transform: uppercase;
+    mix-blend-mode: normal;
+    background: linear-gradient(54.26deg, #A7E6EC 15.62%, #D5ADEE 89.46%);
+  }
+
+  .marquee__inner {
+    display: flex;
+  }
+
+  .marquee__line {
+    flex-shrink: 0;
+    margin: 0;
+    white-space: nowrap;
+    animation: marqueeLine 15s infinite;
+
+    >span {
+      margin-right: 50px;
+      font-size: 38px;
+      //@include metafizzy(38px, 5s);
+
+      &:first-child {
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 1px;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 26px;
+    font-family: primary-semibold;
+    margin-bottom: 60px;
+
+    a {
+      font-family: primary-bold;
+    }
+  }
+
+  &__bottom {
+    margin-top: 50px;
+  }
+}
+
+
+@keyframes marqueeLine {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform:  translateX(-100%);
+  }
+}
+
+.step-section {
+  &__inner {
+    @extend .flex;
+    margin: 0 -35px;
+    position: relative;
+    z-index: 1;
+    @include flex-wrap(wrap);
+  }
+
+  &__item {
+    padding: 0 35px;
+    flex: 1;
+  }
+}
+
+.step-box {
+  &__number {
+    font-size: 13px;
+    text-transform: uppercase;
+    font-family: primary-bold;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-family: primary-bold;
+    margin: 6px 0 12px;
+  }
+
+  &__description {
+    line-height: 21px;
+
+    strong {
+      font-family: primary-bold;
+    }
+  }
+}
+
+.payment-section {
+  &__inner {
+    @extend .flex;
+    @include flex-wrap(wrap);
+  }
+  &__left {
+    width: 55%;
+    padding-right: 40px;
+  }
+  &__right {
+    width: 45%;
+  }
+}
+
+.ticket-block {
+  $this: &;
+
+  &__row {
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgba($black, 0.1);
+
+    &:last-child {
+      border-bottom-width: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      margin-top: 40px;
+    }
+
+    &--disabled {
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($white, .3);
+        z-index: 10;
+      }
+    }
+  }
+
+  &__item {
+    margin-bottom: 40px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    font-family: primary-bold;
+    color: $purple;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+  }
+
+  &__discount  {
+    margin-top: 30px;
+    @extend .flex;
+    @include align-items(stretch);
+
+    .def-input {
+      flex: 1
+    }
+    button {
+      height: initial;
+    }
+  }
+}
+
+.ticket-info {
+  $this: &;
+
+  @extend .flex;
+  @include flex-wrap(wrap);
+  @include align-items(center);
+  @include justify-content(space-between);
+
+  &__left {
+    flex: 1;
+  }
+
+  &__right {
+    @extend .flex;
+    white-space: nowrap;
+    padding-left: 20px;
+    @include align-items(center);
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 30px;
+
+    &#{$this}__name {
+      font-size: 26px;
+      line-height: 32px;
+      font-family: primary-bold;
+      margin-bottom: 12px;
+    }
+
+    &#{$this}__time {
+      font-size: 18px;
+      margin-top: 20px;
+      flex: 100%;
+
+      span {
+        color: rgba($black, 0.6);
+      }
+    }
+  }
+
+  &__price {
+    font-size: 36px;
+    font-family: primary-bold;
+  }
+
+  &__input {
+    margin-left: 20px;
+
+    input {
+      color: rgba($black,0.5);
+      height: 52px;
+      width: 92px;
+      font-size: 30px;
+      font-family: primary;
+      text-align: center;
+      border: 2px solid rgba($black,0.5);
+      @include border-radius(3px);
+      @include transition(color 0.3s, border-color 0.3s);
+
+      &:focus {
+        color: $black;
+        border-color: $black;
+      }
+    }
+  }
+
+  &__form {
+    margin-top: 36px;
+
+    & + & {
+      margin-top: 30px;
+    }
+  }
+}
+
+.payment-info-sticky-wrapper {
+  position: sticky;
+  top: 80px;
+
+  &__btn {
+    margin-top: 40px;
+  }
+}
+
+.payment-info {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 13px;
+    background: url('#{$mainImagePath}/polygon.png') repeat-x;
+    background-size: contain;
+  }
+
+  &__top {
+    padding: 34px;
+    font-size: 32px;
+    font-family: primary-bold;
+    border-bottom: 1px solid rgba($white, 0.4);
+  }
+
+  &__content {
+    padding: 34px;
+    font-size: 22px;
+  }
+  &__row {
+    @extend .flex;
+    @include justify-content(space-between);
+    margin-bottom: 24px;
+
+    >span {
+      &:last-child {
+        text-align: right;
+        white-space: nowrap;
+        padding-left: 10px;
+        font-family: primary-bold;
+      }
+    }
+  }
+  &__total {
+    font-family: primary-bold;
+    font-size: 26px;
+  }
+}
+
+.form-section {
+  &__inner {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1440px) {
+  .step-section {
+    &__inner {
+      margin: 0 -24px;
+    }
+
+    &__item {
+      padding: 0 24px;
+    }
+  }
+
+  .step-box {
+    &__number {
+      font-size: 12px;
+    }
+
+    &__title {
+      font-size: 22px;
+    }
+
+    &__description {
+      font-size: 13px;
+    }
+  }
+
+  .ticket-info {
+    $this: &;
+
+    p {
+      font-size: 19px;
+
+      &#{$this}__name {
+        font-size: 24px;
+        line-height: 30px;
+      }
+      &#{$this}__time {
+        font-size: 17px;
+      }
+    }
+    &__price {
+      font-size: 32px;
+    }
+  }
+
+  .payment-info {
+    &__top {
+      padding: 30px;
+      font-size: 30px;
+    }
+    &__content {
+      padding: 30px;
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .step-section {
+    &__inner {
+      margin: 0 -20px;
+    }
+
+    &__item {
+      padding: 0 20px;
+    }
+  }
+
+  .step-box {
+    &__number {
+      font-size: 10px;
+    }
+
+    &__title {
+      font-size: 18px;
+    }
+
+    &__description {
+      font-size: 12px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .ticket-wrapper {
+    &__form {
+      margin-top: 40px;
+      padding: 30px 0;
+    }
+
+    &__text {
+      a {
+        &:after {
+          content: '';
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .form-section {
+    &__left, &__right {
+      width: 100%;
+    }
+
+    &__right {
+      margin: 60px 0 40px;
+      padding-left: 0;
+    }
+  }
+
+  .ticket-info {
+    $this: &;
+
+    p {
+      &#{$this}__time {
+        font-size: 16px;
+      }
+    }
+    &__price {
+      font-size: 28px;
+    }
+  }
+
+  .payment-info {
+    &__top {
+      padding: 20px;
+      font-size: 26px;
+    }
+    &__content {
+      padding: 20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .ticket-wrapper {
+    &__text {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .step-section {
+    &__item {
+      flex: 50%;
+      margin: 10px 0;
+    }
+  }
+
+  .payment-section {
+    &__inner {
+     >div {
+       flex: 100%;
+     }
+    }
+    &__left {
+      margin-bottom: 40px;
+      padding-right: 0;
+    }
+  }
+
+  .payment-info {
+    margin: 0 -20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .step-section {
+    &__item {
+      flex: 100%;
+    }
+  }
+
+  .ticket-block {
+    &__row {
+      margin-bottom: 30px;
+      padding-bottom: 30px;
+    }
+    &__discount {
+      @include flex-wrap(wrap);
+
+      .def-input, button {
+        flex: 100%;
+      }
+
+      button {
+        margin-top: 20px;
+        height: 56px;
+      }
+    }
+  }
+
+  .ticket-info {
+    $this: &;
+
+    &__right {
+      padding-left: 10px;
+    }
+
+    &__input {
+      margin-left: 10px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .ticket-info {
+    $this: &;
+
+    &__right {
+      flex: 100%;
+      padding-left: 0;
+      order: 2;
+      margin-top: 20px;
+    }
+
+    &__time {
+      order: 1;
+    }
+
+    &__input {
+      margin-left: 10px;
+    }
+  }
+
+  .payment-info {
+    &__row {
+      @include flex-wrap(wrap);
+
+      >span {
+        flex: 100%;
+
+        &:last-child {
+          padding-left: 0;
+          text-align: left;
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,479 @@
+/*text*/
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-transform {
+    &--none {
+        text-transform: none;
+    }
+    &--uppercase {
+        text-transform: uppercase;
+    }
+    &--capitalize {
+        text-transform: capitalize;
+    }
+    &--lowercase {
+        text-transform: lowercase;
+    }
+}
+
+/*float*/
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+/*cursor*/
+.pointer {
+    cursor: pointer;
+}
+
+/*clear*/
+.clearfix::before, .clearfix::after {
+    content: "";
+    display: block;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+/*display*/
+
+.display {
+    &--block {
+        display: block;
+    }
+    &--none {
+        display: none;
+    }
+    &--inline {
+        display: inline;
+    }
+    &--inline-block {
+        display: inline-block;
+    }
+}
+
+.flex {
+    display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+
+    &--wrap {
+        @include flex-wrap(wrap);
+    }
+
+    &--wrap-reverse {
+        @include flex-wrap(wrap-reverse);
+    }
+
+    &__item {
+        flex: 1;
+    }
+}
+
+.align-items {
+    &--stretch {
+        @include align-items(stretch);
+    }
+    &--center {
+        @include align-items(center);
+    }
+    &--end {
+        @include align-items(flex-end);
+    }
+}
+
+.align-self {
+    &--center {
+        @include align-self(center);
+    }
+}
+
+.justify {
+    &--center {
+        @include justify-content(center);
+    }
+    &--space-between {
+        @include justify-content(space-between);
+    }
+    &--end {
+        @include justify-content(flex-end);
+    }
+    &--start {
+        @include justify-content(flex-start);
+    }
+    &--space-around {
+        @include justify-content(space-around);
+    }
+}
+
+/*alignement*/
+
+.align {
+    &--middle {
+        vertical-align: middle;
+    }
+
+    &--top {
+        vertical-align: top;
+    }
+
+    &--bottom {
+        vertical-align: bottom;
+    }
+}
+
+.margin-auto {
+    margin: auto;
+}
+
+/**/
+
+.no-wrap {
+    white-space: nowrap;
+}
+
+.relative {
+    position: relative;
+}
+
+.ellipsis {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    @include text-overflow(ellipsis);
+}
+
+.inline-elements {
+    font-size: 0;
+
+    > div, > span, > li, > i {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+.bg-cover, .bg-contain {
+    background: no-repeat center;
+    background-size: cover;
+}
+
+.bg-contain {
+    background-size: contain;
+}
+
+.underline-hover {
+    position: relative;
+    color: $white;
+
+    &:after {
+        content: '';
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 1px;
+        position: absolute;
+        background-color: $white;
+        @include transition(width 0.3s);
+    }
+
+    &:hover {
+        &:after {
+            width: 100%;
+        }
+    }
+
+    &--secondary {
+        color: $black;
+
+        &:after {
+            background-color: $black;
+        }
+    }
+}
+
+
+/* Colors */
+.bg-dark {
+    color: $white;
+    background: $black url(#{$mainImagePath}/bg.png) repeat center !important;
+    //@include animation (grain 6s steps(10) infinite);
+
+}
+.color-white {
+    color: $white;
+}
+.color-black {
+    color: $black;
+}
+.color-red {
+    color: $red;
+}
+
+/* Generate classes for margin */
+@mixin margin($position, $value) {
+    margin-#{$position}: #{$value + px} !important;
+}
+
+$margin-right-list: (
+        no: 0,
+        small: 8,
+        medium: 18,
+        medium-lg: 24,
+        large-xs: 30,
+        large: 40,
+);
+
+@each $name, $size in $margin-right-list {
+    .margin-right-#{$name} {
+        @include margin('right', $size);
+    }
+}
+
+$margin-left-list: (
+        no: 0,
+        small: 8,
+        medium: 18,
+        medium-lg: 24,
+        large-xs: 30,
+        large: 40,
+);
+
+@each $name, $size in $margin-left-list {
+    .margin-left-#{$name} {
+        @include margin('left', $size);
+    }
+}
+
+$margin-top-list: (
+        no: 0,
+        small: 8,
+        medium: 18,
+        medium-lg: 24,
+        large-xs: 30,
+        large: 40,
+);
+
+@each $name, $size in $margin-top-list {
+    .margin-top-#{$name} {
+        @include margin('top', $size);
+    }
+}
+
+$margin-bottom-list: (
+        no: 0,
+        small: 8,
+        medium: 18,
+        medium-lg: 24,
+        large-xs: 30,
+        large: 40,
+);
+
+@each $name, $size in $margin-bottom-list {
+    .margin-bottom-#{$name} {
+        @include margin('bottom', $size);
+    }
+}
+
+/* Generate classes for padding */
+@mixin padding($position, $value) {
+    padding-#{$position}: #{$value + px} !important;
+}
+
+$padding-right-list: (
+        no: 0,
+        small: 8,
+        medium: 18,
+        medium-lg: 24,
+        large-xs: 30,
+        large: 40,
+);
+
+@each $name, $size in $padding-right-list {
+    .padding-right-#{$name} {
+        @include padding('right', $size);
+    }
+}
+
+$padding-left-list: (
+        no: 0,
+        small: 8,
+        medium: 18,
+        medium-lg: 24,
+        large-xs: 30,
+        large: 40,
+);
+
+@each $name, $size in $padding-left-list {
+    .padding-left-#{$name} {
+        @include padding('left', $size);
+    }
+}
+
+$padding-top-list: (
+        no: 0,
+        small: 8,
+        medium: 18,
+        medium-lg: 24,
+        large-xs: 30,
+        large: 40,
+);
+
+@each $name, $size in $padding-top-list {
+    .padding-top-#{$name} {
+        @include padding('top', $size);
+    }
+}
+
+$padding-bottom-list: (
+        no: 0,
+        small: 8,
+        medium: 18,
+        medium-lg: 24,
+        large-xs: 30,
+        large: 40,
+);
+
+@each $name, $size in $padding-bottom-list {
+    .padding-bottom-#{$name} {
+        @include padding('bottom', $size);
+    }
+}
+
+/* Width with persents */
+$width-list: (
+        small-xs: 20,
+        small: 30,
+        medium-xs: 40,
+        medium: 50,
+        medium-lg: 60,
+        large-xs: 70,
+        large: 80,
+        full: 100,
+);
+
+@mixin width-percent($value) {
+    width: #{$value + '%'} !important;
+}
+
+@each $name, $size in $width-list {
+    .width-percent-#{$name} {
+        @include width-percent($size);
+    }
+}
+
+/* Max-Width with pixels */
+$max-width-list: (
+        small: 110,
+        small-md: 130,
+        medium: 160,
+        medium-lg: 190,
+        large-xs: 240,
+        large: 300,
+        large-extra: 320,
+);
+
+@mixin max-width($value) {
+    max-width: #{$value + px} !important;
+}
+
+@each $name, $size in $max-width-list {
+    .max-width-#{$name} {
+        @include max-width($size);
+    }
+}
+
+/* Min-Width with pixels */
+$min-width-list: (
+        small: 80,
+        medium: 120,
+        medium-lg: 130,
+        large-xs: 170,
+        large: 240,
+        extra-large: 300,
+);
+
+@mixin min-width($value) {
+    min-width: #{$value + px} !important;
+}
+
+@each $name, $size in $min-width-list {
+    .min-width-#{$name} {
+        @include min-width($size);
+    }
+}
+
+
+@media (max-width: 992px) {
+    .underline-hover {
+        &:after {
+            content: none;
+        }
+    }
+
+    @each $name, $size in $margin-top-list {
+        @if $size > 29 and $size < 41 {
+            .margin-top-#{$name} {
+                @include margin('top', $size - 10);
+            }
+        }
+    }
+
+    @each $name, $size in $margin-bottom-list {
+        @if $size > 29 and $size < 41 {
+            .margin-bottom-#{$name} {
+                @include margin('bottom', $size - 10);
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    @each $name, $size in $margin-top-list {
+        @if $size > 20 and $size < 25 {
+            .margin-top-#{$name} {
+                @include margin('top', $size - 4);
+            }
+        }
+    }
+
+    @each $name, $size in $margin-bottom-list {
+        @if $size > 20 and $size < 25 {
+            .margin-bottom-#{$name} {
+                @include margin('bottom', $size - 4);
+            }
+        }
+    }
+}
+@media (max-width: 540px) {
+    @each $name, $size in $margin-top-list {
+        @if $size > 20 and $size < 25 {
+            .margin-top-#{$name} {
+                @include margin('top', $size - 8);
+            }
+        }
+    }
+
+    @each $name, $size in $margin-bottom-list {
+        @if $size > 20 and $size < 25 {
+            .margin-bottom-#{$name} {
+                @include margin('bottom', $size - 8);
+            }
+        }
+    }
+}

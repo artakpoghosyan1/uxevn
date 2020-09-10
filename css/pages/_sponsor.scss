@@ -1,0 +1,172 @@
+/* Sponsor */
+
+.sponsor-wrapper {
+  $this: &;
+
+  &__title {
+    font-size: 32px;
+    font-family: primary-semibold;
+  }
+
+  &__step {
+    #{$this}__subtitle {
+      font-size: 24px;
+      margin: 18px 0 40px;
+      font-family: primary-light;
+    }
+
+    .step-box {
+      &__title {
+        margin: 0;
+        font-size: 18px;
+      }
+
+      &__description {
+        font-size: 18px;
+        line-height: 28px;
+        font-family: primary-light;
+      }
+    }
+  }
+
+  .step-section {
+    &__item {
+      &:last-child {
+        flex:1.5;
+      }
+    }
+  }
+
+  &__form {
+    margin-top: 60px;
+    max-width: 650px;
+  }
+}
+
+.sponsor-block {
+  $this: &;
+
+  margin-top: 30px;
+  max-width: 520px;
+
+  &__row {
+    @extend .flex;
+    margin: 30px -12px 0;
+    @include flex-wrap(wrap);
+
+    &.sponsor-primary {
+      #{$this}__image {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &__item {
+    width: 33.3333%;
+    padding: 12px;
+  }
+
+  &__image {
+    height: 70px;
+    background: rgba($black, 0.24) no-repeat center;
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  .sponsor-wrapper {
+    $this: &;
+
+    &__title {
+      font-size: 28px;
+    }
+
+    &__step {
+      #{$this}__subtitle {
+        font-size: 22px;
+      }
+    }
+  }
+
+  .sponsor-block {
+    margin-top: 50px;
+  }
+}
+@media (max-width: 992px) {
+  .sponsor-wrapper {
+    $this: &;
+
+    &__title {
+      font-size: 26px;
+    }
+
+    &__step {
+      #{$this}__subtitle {
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+    .step-section {
+      &__item {
+        &:last-child {
+          flex: 50%;
+        }
+      }
+    }
+  }
+
+  .sponsor-block {
+    margin-top: 0;
+
+    &__row {
+      margin-top: 20px;
+    }
+  }
+}
+
+@media (max-width: 992px) and (min-width: 769px) {
+  .sponsor-wrapper {
+    .step-section {
+      &__item {
+        flex: 50%;
+        margin: 10px 0;
+
+        &:last-child {
+          flex: 50%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .sponsor-wrapper {
+    &__title {
+      font-size: 24px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .sponsor-block {
+    max-width: initial;
+
+    &__item {
+      padding: 10px;
+      width: 50%;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .sponsor-block {
+    &__image {
+      background-size: 80%;
+    }
+  }
+}

@@ -1,0 +1,140 @@
+
+/* About Us */
+
+.about-wrapper {
+  font-size: 18px;
+  line-height: 32px;
+
+  P {
+    margin-bottom: 50px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__inner {
+    @extend .flex;
+    @include flex-wrap(wrap);
+  }
+
+  &__left {
+    flex: 1;
+    padding-right: 6%;
+  }
+  &__right {
+    flex: 2;
+  }
+
+  &__description {
+    font-size: 24px;
+    line-height: 38px;
+  }
+
+  .link-purple {
+    @extend .underline-hover;
+    color: $purple;
+    font-family: primary-bold;
+
+    &:after {
+      background-color: $purple;
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px !important;
+  }
+
+  &__bottom {
+    padding-top: 70px;
+    margin-top: 70px;
+    position: relative;
+
+    &:before {
+      content: '';
+      width: 500%;
+      height: 1px;
+      background-color: rgba($black, 0.1);
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    li {
+      font-size: 20px;
+      margin-bottom: 10px;
+      padding-left: 24px;
+      position: relative;
+      text-transform: uppercase;
+
+      &:before {
+        content: '\e907';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        font-size: 12px;
+        font-family: icomoon;
+        @include transform(translateY(-50%));
+      }
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  .about-wrapper {
+    &__description {
+      font-size: 28px;
+      line-height: 40px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .about-wrapper {
+    P {
+      margin-bottom: 40px;
+    }
+
+    &__description {
+      font-size: 24px;
+      line-height: 38px;
+    }
+
+    &__bottom {
+      padding-top: 50px;
+      margin-top: 50px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about-wrapper {
+    P {
+      margin-bottom: 24px;
+    }
+
+    &__left, &__right {
+      flex: 100%;
+
+      p {
+        text-align: left !important;
+      }
+    }
+
+    &__left {
+      padding-right: 0;
+      margin-bottom: 30px;
+    }
+
+    &__description {
+      font-size: 22px;
+      line-height: 32px;
+    }
+
+    &__bottom {
+      padding-top: 40px;
+      margin-top: 40px;
+      border-top: 1px solid rgba($black, 0.1);
+    }
+  }
+}

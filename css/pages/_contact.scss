@@ -1,0 +1,269 @@
+/* Contact page */
+
+.contact-wrapper {
+  &__inner {
+    max-width: initial;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+
+  &__content {
+    @extend .flex;
+    @include align-items(stretch);
+  }
+
+  &__left {
+    @extend .flex;
+    width: 30%;
+    padding: 20px 50px 45px 0;
+    @include flex-wrap(wrap);
+
+    >div {
+      flex: 100%;
+
+      &:last-child {
+        margin-top: auto;
+      }
+    }
+
+  }
+  &__right {
+    @extend .flex;
+    width: 70%;
+    padding: 80px 60px 40px;
+    @include flex-wrap(wrap);
+
+    >div {
+      flex: 100%;
+
+      &:first-child {
+        margin-bottom: 100px;
+      }
+
+      &:last-child {
+        margin-top: auto;
+      }
+    }
+  }
+
+  &__form {
+    max-width: 550px;
+  }
+
+  .social-list {
+    margin-top: 12px;
+  }
+}
+
+.contact-list {
+  $this: &;
+
+  border-bottom: 1px solid rgba($black, 0.1);
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+
+  &:last-child {
+    border-bottom-width: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  &__row {
+    @extend .flex;
+    margin-bottom: 40px;
+    @include align-items(center);
+
+    &:last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+  &__icon {
+    font-size: 62px;
+    line-height: 0;
+    padding-right: 20px;
+
+    &.icon {
+      &--second {
+        i {
+          @include transform(rotate(90deg));
+        }
+      }
+      &--third {
+        i {
+          @include transform(rotate(-126deg));
+        }
+      }
+      &--fouurth {
+        i {
+          @include transform(rotate(-90deg));
+        }
+      }
+    }
+  }
+  &__info {
+    >span {
+      display: block;
+    }
+  }
+  &__label {
+    flex: 100%;
+    font-size: 22px;
+    margin-bottom: 4px;
+    font-family: primary-black;
+    text-transform: uppercase;
+  }
+  &__text {
+    flex: 100%;
+    font-size: 30px;
+    font-family: primary-semibold;
+
+    a {
+      @extend .underline-hover;
+      @extend .underline-hover--secondary;
+    }
+  }
+
+  &--secondary {
+    #{$this}__label {
+      font-family: primary-bold;
+    }
+    #{$this}__text {
+      font-family: primary;
+      text-transform: capitalize;
+
+      a {
+        @extend .underline-hover;
+      }
+    }
+  }
+
+  &--sm {
+    #{$this}__row {
+      margin-bottom: 35px;
+    }
+    #{$this}__icon {
+      font-size: 50px;
+      padding-right: 16px;
+    }
+    #{$this}__label {
+      font-size: 18px;
+    }
+    #{$this}__text {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  .contact-wrapper {
+    &__left {
+      width: 40%;
+      padding-right: 40px;
+      padding-bottom: 40px;
+    }
+    &__right {
+      width: 60%;
+      padding: 80px 60px 40px;
+      background-color: $black;
+    }
+  }
+
+  .contact-list {
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+
+    &__icon {
+      font-size: 50px;
+    }
+    &__text {
+      font-size: 24px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .contact-wrapper {
+    &__right {
+      padding: 60px 40px 40px;
+
+      >div {
+        &:first-child {
+          margin-bottom: 80px;
+        }
+      }
+    }
+  }
+
+  .contact-list {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+
+    &__label {
+      font-size: 20px;
+    }
+    &__text {
+      font-size: 24px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-wrapper {
+    &__inner {
+      padding-left: 0
+    }
+    &__content {
+      @include flex-wrap(wrap);
+
+      >div {
+        flex: 100%;
+      }
+    }
+    .title {
+      margin-left: 20px;
+    }
+    &__left {
+      padding: 0 20px;
+      margin-bottom: 40px;
+    }
+    &__form {
+      max-width: initial;
+    }
+  }
+
+  .contact-list {
+    &__text {
+      font-size: 22px;
+    }
+    &__label {
+      font-size: 18px;
+    }
+  }
+}
+
+
+@media (max-width: 576px) {
+  .contact-wrapper {
+    &__right {
+      padding: 40px 20px;
+    }
+  }
+
+  .contact-list {
+    &__text {
+      &.custom-text {
+        font-size: 0;
+
+        >a {
+          display: block;
+          font-size: 22px;
+          line-height: 33px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

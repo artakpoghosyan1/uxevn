@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    @include box-sizing(border-box);
+}
+
+body {
+    font-size: 14px;
+    color: $black;
+    position: relative;
+    min-width: 320px;
+    font-family: primary;
+    word-break: break-word;
+    overflow-x: hidden;
+}
+
+.no-scroll {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+input, button {
+    outline: none;
+}
+
+input[type='file'] {
+    display: none;
+}
+
+a {
+    color: $black;
+    text-decoration: none;
+
+    &:hover {
+        cursor: pointer;
+        text-decoration: none;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+iframe {
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+}
+
+@media (max-width: 1280px) {
+    body {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 540px) {
+    body {
+        font-size: 12px;
+    }
+}
