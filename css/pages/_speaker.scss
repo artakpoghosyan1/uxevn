@@ -28,8 +28,6 @@ $icon-size: 52px;
 
   @media(min-width: 993px) {
     &:not(&--secondary):hover {
-      cursor: pointer;
-
       .image-box {
         &__inner {
           @include transform(scale(1.3));
@@ -61,7 +59,7 @@ $icon-size: 52px;
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(54.26deg, #A7E6EC 15.62%, #D5ADEE 89.46%);
+      background: linear-gradient(54.26deg, rgba(0, 204, 236, 0.7) 15.62%, rgba(215, 0, 227, 0.7) 89.46%);
       mix-blend-mode: color;
       @include border-radius(50%);
       @include box-sizing(border-box);
@@ -116,16 +114,44 @@ $icon-size: 52px;
     }
   }
 
+  &__link {
+    color: $white;
+
+
+
+    &:hover {
+      #{$this}__name {
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
   &__name {
+    position: relative;
     font-size: 22px;
     text-transform: uppercase;
     font-family: primary-bold;
-    margin-bottom: 6px;
+
+    &:after {
+      content: '';
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      position: absolute;
+      background-color: $white;
+      @include transition(width 0.3s);
+    }
   }
 
   &__position {
+    display: block;
     font-size: 16px;
     line-height: 24px;
+    margin: 10px auto 0;
+    max-width: 320px;
   }
 
   &__social {
@@ -262,6 +288,13 @@ $icon-size: 52px;
     border-top: 1px solid rgba($black, 0.2);
     @include align-items(center);
     @include justify-content(space-between);
+  }
+
+  .speaker-box {
+    &__position {
+      max-width: initial;
+      margin: 0;
+    }
   }
 }
 

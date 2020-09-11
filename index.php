@@ -10,7 +10,8 @@ $className = '';
 
     if($page=='speaker/geff-gothelf' || $page=='speaker/david-m-hogue' || $page=='speaker/ani-avanian'
     || $page=='speaker/manuel-lima' || $page=='speaker/vitaly-friedman' || $page=='speaker/amanda-stockwell'
-    || $page=='speaker/anna-vasyukova' || $page=='speaker/rafayel-mkrtchyan') {
+    || $page=='speaker/anna-vasyukova' || $page=='speaker/rafayel-mkrtchyan'
+    || $page=='workshop/vitaly-friedman' || $page=='workshop/amanda-stockwell') {
         $className = 'dark-theme';
     }
 

@@ -16,11 +16,9 @@
   box-shadow: $value;
 }
 
-@mixin animation($name, $value) {
-  -webkit-animation-name: $name;
-  -webkit-animation-duration: $value;
-  animation-name: $name;
-  animation-duration: $value;
+@mixin animation($value...) {
+  -webkit-animation: $value;
+  animation: $value;
 }
 
 @mixin transform($value...) {

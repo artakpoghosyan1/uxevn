@@ -51,14 +51,18 @@
   }
 
   .social-list {
-    margin-top: 12px;
+    margin-top: 18px !important;
+
+    a {
+      color: $white;
+    }
   }
 }
 
 .contact-list {
   $this: &;
 
-  border-bottom: 1px solid rgba($black, 0.1);
+  border-bottom: 1px solid rgba($white, 0.1);
   padding-bottom: 50px;
   margin-bottom: 50px;
 
@@ -77,6 +81,15 @@
       margin-bottom: 0 !important;
     }
   }
+
+  &__col {
+    margin-right: 70px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
   &__icon {
     font-size: 62px;
     line-height: 0;
@@ -93,7 +106,7 @@
           @include transform(rotate(-126deg));
         }
       }
-      &--fouurth {
+      &--fourth {
         i {
           @include transform(rotate(-90deg));
         }
@@ -108,31 +121,27 @@
   &__label {
     flex: 100%;
     font-size: 22px;
-    margin-bottom: 4px;
-    font-family: primary-black;
+    margin-bottom: 10px;
+    font-family: primary-bold;
     text-transform: uppercase;
   }
   &__text {
     flex: 100%;
     font-size: 30px;
-    font-family: primary-semibold;
 
     a {
       @extend .underline-hover;
-      @extend .underline-hover--secondary;
     }
   }
 
   &--secondary {
     #{$this}__label {
-      font-family: primary-bold;
+      font-family: primary-black;
     }
     #{$this}__text {
-      font-family: primary;
-      text-transform: capitalize;
-
       a {
-        @extend .underline-hover;
+        font-family: primary-semibold;
+        @extend .underline-hover--secondary;
       }
     }
   }
@@ -147,10 +156,15 @@
     }
     #{$this}__label {
       font-size: 18px;
+      margin-bottom: 7px;
     }
     #{$this}__text {
       font-size: 16px;
     }
+  }
+
+  .social-list {
+    margin-top: 23px;
   }
 }
 
@@ -232,6 +246,9 @@
   }
 
   .contact-list {
+    &__col {
+      margin-right: 50px;
+    }
     &__text {
       font-size: 22px;
     }
@@ -250,6 +267,12 @@
   }
 
   .contact-list {
+    &__col {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 40px;
+    }
+
     &__text {
       &.custom-text {
         font-size: 0;

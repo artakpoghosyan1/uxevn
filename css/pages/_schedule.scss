@@ -31,12 +31,19 @@ $day-box-size: 66px;
   $this: &;
 
   @extend .flex;
-  margin: 40px 0;
+  margin: 50px 0;
   width: 100%;
 
   &__right {
     min-width: 1px;
-    padding-left: 24px;
+    margin-left: 24px;
+  }
+
+  &:not(&--secondary) {
+    #{$this}__right {
+      padding-bottom: 50px;
+      border-bottom: 1px solid $dark-blue;
+    }
   }
 
   &__day {
@@ -52,8 +59,6 @@ $day-box-size: 66px;
   }
 
   &--secondary {
-    max-width: 1110px;
-
     #{$this}__day {
       background-color: $blue;
     }
@@ -63,12 +68,11 @@ $day-box-size: 66px;
 
       >div {
         &:first-child {
-          width: calc(100% - 220px);
+          max-width: 760px;
         }
 
         &:last-child {
-          width: 270px;
-          padding-left: 30px;
+          padding: 0 30px;
         }
       }
     }
@@ -131,7 +135,7 @@ $day-box-size: 66px;
   $this: &;
 
   @extend .flex;
-  background-color: #1C1C1C;
+  background-color: $dark-blue;
   height: 100%;
   color: $white;
   @include flex-wrap(wrap);
@@ -142,7 +146,7 @@ $day-box-size: 66px;
       flex: 100%;
 
       &:last-child {
-        border-top: 1px solid #171717;
+        border-top: 1px solid $black;
         margin-top: auto;
         min-height: 100px;
       }
@@ -190,7 +194,7 @@ $day-box-size: 66px;
   &--secondary {
     text-align: center;
     padding: 20px;
-    border: 1px solid #363434;
+    border: 1px solid $white;
     background-color: transparent;
     @include align-items(center);
     @include justify-content(center);
@@ -227,8 +231,13 @@ $day-box-size: 66px;
     $this: &;
 
     &--secondary {
-      max-width: 850px;
-
+      #{$this}__right {
+        > div {
+          &:first-child {
+            max-width: 500px;
+          }
+        }
+      }
 
       #{$this}__item {
         &:nth-child(2n) {
@@ -253,16 +262,6 @@ $day-box-size: 66px;
 
     &--secondary {
       #{$this}__right {
-        >div {
-          &:first-child {
-            width: calc(100% - 260px);
-          }
-
-          &:last-child {
-            width: 270px;
-            padding-left: 30px;
-          }
-        }
       }
 
       #{$this}__item {
@@ -296,10 +295,11 @@ $day-box-size: 66px;
         >div {
           width: 100% !important;
           flex: 100%;
+          max-width: initial !important;
 
           &:last-child {
             margin-top: 40px;
-            padding-left: 0;
+            padding: 0;
           }
         }
       }
@@ -317,7 +317,7 @@ $day-box-size: 66px;
 
     &__right {
       margin-top: 20px;
-      padding-left: 0;
+      margin-left: 0;
     }
   }
 }

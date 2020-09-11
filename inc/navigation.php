@@ -1,4 +1,5 @@
 <div class="navigation bg-dark" id="navWrapper">
+    <div class="grain"></div>
     <div class="navigation__inner">
         <div class="navigation__top flex justify--space-between align-items--center js-to-left">
             <span class="logo bg-contain"><a href="/#homeSection" class="scroll-page"><i class="icon-logo"></i></a></span>

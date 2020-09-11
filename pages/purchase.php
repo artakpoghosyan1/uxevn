@@ -3,10 +3,10 @@
 
     <section class="wrapper-section">
         <div class="wrapper-section__inner">
-        <div class="wrapper-section__top">
-            <h1 class="title title--primary" data-aos="fade-up">Purchase</h1>
-        </div>
-            <div class="ticket-wrapper" data-aos="fade-up" data-aos-offset="50">
+            <div class="wrapper-section__top">
+                <h1 class="title title--primary" data-aos="fade-up">Purchase</h1>
+            </div>
+            <div class="ticket-wrapper ticket-wrapper--purchase" data-aos="fade-up" data-aos-offset="50">
                 <div class="step-section bg-dark hide-for-sm-mobile">
                     <div class="inner-wrapper inner-wrapper--sm">
                         <div class="step-section__inner">
@@ -221,7 +221,7 @@
                                         </div>
                                     </div>
 
-                                    <a href="#" class="def-button def-button--secondary def-button--white def-button--full payment-info-sticky-wrapper__btn">
+                                    <a href="/" class="def-button def-button--secondary def-button--white def-button--full payment-info-sticky-wrapper__btn">
                                         <span class="def-button__inner">Back to Tickets page</span>
                                     </a>
                                 </div>
@@ -265,32 +265,14 @@
                                 </div>
                             </div>
                             <div class="form__row flex flex--wrap">
-                                <div class="form__col">
-                                    <div class="def-input">
-                                        <span class="def-input__label">Company Name</span>
-                                        <input type="text" placeholder="+1 (757) 000-8020" value="" required/>
-                                        <span></span>
-                                    </div>
-                                </div>
-                                <div class="form__col">
-                                    <div class="def-input">
-                                        <span class="def-input__label">Promo Code</span>
-                                        <input type="text" placeholder="Armenia" value="" required/>
-                                        <span></span>
-                                    </div>
-                                </div>
+                                <label class="def-checkbox">
+                                    <input type="checkbox" name=""/>
+                                    <span><i class="icon-check"></i></span>
+                                    <span class="def-checkbox__text">I agree to the Design2Science <a href="index.php?page=terms-and-conditions" class="link link--blue">Terms & Conditions</a></span>
+                                </label>
                             </div>
                             <div class="form__row">
-                                <div class="form__col">
-                                    <div class="def-input">
-                                        <span class="def-input__label">Address</span>
-                                        <input type="text" placeholder="12th St. ABC Bldg.,Virginia Beach,VA USA" value="" required/>
-                                        <span></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form__row">
-                                <button class="form__button def-button def-button--secondary">
+                                <button class="form__button def-button def-button--secondary" disabled>
                                     <span class="def-button__inner">checkout ($890)</span>
                                 </button>
                             </div>

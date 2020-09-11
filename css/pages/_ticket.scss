@@ -2,10 +2,12 @@
 /* Buy Tickets */
 
 .ticket-wrapper {
+  $this: &;
+
   &__form {
+    @extend .bg-light;
     margin-top: 60px;
     padding: 50px 0;
-    background-color: $grey-light;
   }
 
   .marquee {
@@ -53,6 +55,16 @@
 
   &__bottom {
     margin-top: 50px;
+  }
+
+  &--purchase {
+    #{$this}__form {
+      button {
+        min-width: auto;
+        max-width: 260px;
+        width: 100%;
+      }
+    }
   }
 }
 

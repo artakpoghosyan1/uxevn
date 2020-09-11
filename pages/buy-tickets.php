@@ -85,7 +85,7 @@
                                             <input type="text" placeholder="Enter Discount Code"/>
                                             <span></span>
                                         </div>
-                                        <button class="def-button def-button--" data-aos="fade-up" data-aos-offset="120" onclick="window.open('index.php?page=purchase', '_self')">Submit</button>
+                                        <button class="def-button def-button--simple" data-aos="fade-up" data-aos-offset="120" onclick="window.open('index.php?page=purchase', '_self')">Submit</button>
                                     </div>
                                 </div>
                             </div>
@@ -230,8 +230,8 @@
                             </div>
                         </div>
 
-                        <a href="#buyTicketSection" class="def-button def-button--full payment-info-sticky-wrapper__btn def-button--secondary js-hover-reaction" data-aos="fade-up"  data-aos-offset="0">
-                            <span class="def-button__inner">buy tickets</span>
+                        <a href="#buyTicketSection" class="def-button def-button--full payment-info-sticky-wrapper__btn def-button--fourth js-hover-reaction" data-aos="fade-up"  data-aos-offset="0">
+                            <span class="def-button__inner">Continue</span>
                         </a>
                     </div>
                 </div>

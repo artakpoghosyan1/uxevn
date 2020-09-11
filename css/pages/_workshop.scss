@@ -31,16 +31,32 @@
 
   &__subtitle, &__text {
     font-size: 22px;
-    line-height: 33px;
+    line-height: 34px;
   }
 
   &__text {
-    margin-bottom: 40px;
+    p {
+      margin-bottom: 40px;
+
+      &.subtitle {
+        font-family: primary-bold;
+        margin-bottom: 0;
+      }
+    }
+
+    ul {
+      margin-bottom: 40px;
+
+      li {
+        list-style: disc;
+        list-style-position: inside;
+      }
+    }
   }
 
   &__subtitle {
     margin: 25px 0;
-    font-family: primary-semibold;
+    font-family: primary-bold;
   }
 }
 

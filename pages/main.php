@@ -17,7 +17,7 @@
         </div>
     </div>
 </section>
-<div class="banner bg-dark" data-aos="fade-up">
+<div class="banner bg-light" data-aos="fade-up">
     <div class="banner__inner inner-wrapper">
         <p class="banner__title" data-aos="fade-right">Proudly sponsored by</p>
         <div class="banner__img" data-aos="fade-right" data-aos-offset="50">
@@ -54,7 +54,7 @@
     <div class="wrapper-section__inner">
         <div class="wrapper-section__top">
             <h1 class="title title--primary color-white" data-aos="fade-up">Schedule</h1>
-            <a href="#buyTicketSection" data-aos="fade-up" data-aos-offset="50" class="def-button def-button--primary scroll-page fixed-bottom">
+            <a href="#buyTicketSection" data-aos="fade-up" data-aos-offset="50" class="def-button def-button--tertiary scroll-page fixed-bottom">
                 <span class="def-button__inner">buy tickets</span>
             </a>
         </div>
@@ -106,7 +106,7 @@
         <?php include('buy-tickets.php'); ?>
     </div>
 </section>
-<section class="wrapper-section wrapper-section--contact" id="contactSection">
+<section class="wrapper-section wrapper-section--dark" id="contactSection">
     <div class="wrapper-section__inner">
         <div class="wrapper-section__top">
             <h1 class="title title--primary" data-aos="fade-up">Contact Us</h1>

@@ -26,7 +26,7 @@
                                </div>
                            </div>
                        </div>
-                       <a href="/#buyTicketSection" class="def-button def-button--primary scroll-page">
+                       <a href="/#buyTicketSection" class="def-button def-button--tertiary scroll-page">
                            <span class="def-button__inner">buy tickets</span>
                        </a>
                    </div>

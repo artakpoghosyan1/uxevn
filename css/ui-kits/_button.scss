@@ -11,7 +11,7 @@
   position: relative;
   font-family: primary-bold;
   white-space: nowrap;
-  background-color: $black;
+  background-color: transparent;
   border: 1px solid transparent;
 
   &:hover {
@@ -31,13 +31,12 @@
     position: relative;
     z-index: 1;
     border: 1px solid transparent;
-    @include transform(translate(0, 0));
     @include transform(translate(8px, -8px));
     @include transition(background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.3s);
   }
 
-  &--primary, &--secondary {
-    background-color: transparent;
+  &--simple {
+    background-color: $black;
   }
 
   &--primary {
@@ -54,16 +53,31 @@
     border-color: $black;
 
     #{$this}__inner {
-      border-color: $black;
+      border-color: $black ;
       background-color: $black;
     }
   }
 
   &--tertiary {
-    border-width: 0;
-    padding: 0 40px;
-    line-height: 56px;
-    background-color: $purple;
+    border-color: $black;
+
+    #{$this}__inner {
+      border-color: $blue ;
+      background-color: $blue;
+    }
+  }
+
+  &--tertiary, &--fourth  {
+    border-color: $white;
+
+    #{$this}__inner {
+      border-color: $blue ;
+      background-color: $blue;
+    }
+  }
+
+  &--fourth {
+    border-color: $black;
   }
 
   &--white {
@@ -76,6 +90,18 @@
   &--full {
     display: block;
   }
+
+  &[disabled] {
+    opacity: 0.5;
+
+    &:hover {
+      cursor: not-allowed;
+
+      #{$this}__inner {
+        @include transform(translate(8px, -8px));
+      }
+    }
+  }
 }
 
 @media (max-width: 992px) {
@@ -83,16 +109,13 @@
     &__inner {
       padding: 0 15px;
     }
-
-    &--tertiary {
-      padding: 0 30px;
-    }
   }
 }
 
 @media (max-width: 576px) {
   .def-button {
     $this: &;
+    max-width: initial !important;
 
     &.fixed-bottom {
       position: absolute;

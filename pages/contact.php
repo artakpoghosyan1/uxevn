@@ -2,12 +2,12 @@
     <div class="contact-wrapper__inner inner-wrapper">
         <div class="contact-wrapper__content">
             <div class="contact-wrapper__left timzone-block">
-                <p class="timzone-block__title font-primary--bold" data-aos="fade-up" data-aos-offset="30">Time Zone</p>
+                <p class="timzone-block__title font-primary--bold" data-aos="fade-up" data-aos-offset="30">The conference starts at:</p>
                 <div class="contact-list contact-list--sm">
                     <div class="contact-list__row" data-aos="fade-up" data-aos-offset="50">
                         <span  class="contact-list__icon icon--first"><i class="icon-time"></i></span>
                         <span  class="contact-list__info">
-                            <span class="contact-list__label">Yerevan</span>
+                            <span class="contact-list__label">Armenia</span>
                             <span class="contact-list__text">5:15 - 6:15 PM GMT +4</span>
                         </span>
                     </div>
@@ -61,7 +61,7 @@
                     </div>
                 </div>
             </div>
-            <div class="contact-wrapper__right bg-dark" data-aos="fade-up" data-aos-offset="200">
+            <div class="contact-wrapper__right" data-aos="fade-up" data-aos-offset="200">
                 <div class="contact-wrapper__form form">
                     <form>
                         <div class="form__row" data-aos="fade-right" data-aos-offset="200">
@@ -98,7 +98,7 @@
                     </form>
                 </div>
                 <div class="contact-wrapper__bottom">
-                    <div class="contact-list contact-list--secondary">
+                    <div class="contact-list">
                         <div class="contact-list__row" data-aos="fade-right">
                             <span class="contact-list__info">
                                 <span class="contact-list__label">Design by</span>

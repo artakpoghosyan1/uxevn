@@ -27,18 +27,8 @@
   }
 
   &__description {
-    font-size: 24px;
+    font-size: 22px;
     line-height: 38px;
-  }
-
-  .link-purple {
-    @extend .underline-hover;
-    color: $purple;
-    font-family: primary-bold;
-
-    &:after {
-      background-color: $purple;
-    }
   }
 
   &__title {
@@ -47,6 +37,7 @@
 
   &__bottom {
     padding-top: 70px;
+    padding-bottom: 40px;
     margin-top: 70px;
     position: relative;
 
@@ -61,7 +52,6 @@
     }
 
     li {
-      font-size: 20px;
       margin-bottom: 10px;
       padding-left: 24px;
       position: relative;

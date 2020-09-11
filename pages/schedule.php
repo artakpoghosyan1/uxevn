@@ -1,7 +1,6 @@
 <div class="schedule-wrapper">
     <div class="inner-wrapper">
         <div>
-
             <div class="schedule-list">
                 <div class="schedule-list__left">
                     <span class="schedule-list__day" data-aos="fade-up">22</span>
@@ -131,13 +130,9 @@
                         </div>
 
                     </div>
-                    <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+<!--                    <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>-->
                 </div>
             </div>
-
-
-
-
 
 
             <div class="schedule-list schedule-list--secondary">
@@ -285,15 +280,16 @@
                             </div>
 
                         </div>
-                        <div class="progress show-for-tablet" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+<!--                        <div class="progress show-for-tablet" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>-->
                     </div>
+
                     <div class="schedule-wrapper__timezone timzone-block">
-                        <p class="timzone-block__title font-primary--semibold" data-aos="fade-up" data-aos-offset="50">Time Zone</p>
-                        <div class="contact-list contact-list--secondary contact-list--sm">
+                        <p class="timzone-block__title font-primary--semibold" data-aos="fade-up" data-aos-offset="50">The conference starts at: </p>
+                        <div class="contact-list contact-list--sm">
                             <div class="contact-list__row" data-aos="fade-up" data-aos-offset="80">
                                 <span  class="contact-list__icon icon--first"><i class="icon-time"></i></span>
                                 <span  class="contact-list__info">
-                                    <span class="contact-list__label">Yerevan</span>
+                                    <span class="contact-list__label">Armenia</span>
                                     <span class="contact-list__text">5:15 - 6:15 PM GMT +4</span>
                                 </span>
                             </div>
