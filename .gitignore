@@ -13,6 +13,7 @@ mochawesome.json
 
 # Output folder
 .sass-cache
+global.css.map
 
 # Node-specific things
 node_modules/
