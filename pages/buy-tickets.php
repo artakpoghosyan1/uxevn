@@ -172,7 +172,7 @@
                     </div>
                 </div>
                 <div class="payment-section__right">
-                    <div class="payment-info payment-info--dynamic">
+                    <div class="payment-info--dynamic">
                         <div class="payment-info bg-dark" data-aos="fade-up" data-aos-offset="150">
                             <div class="payment-info__top">
                                 <p>Overview</p>
