@@ -3,8 +3,20 @@
   height: 50px;
   position: absolute;
   z-index: 10000;
-  background: no-repeat url(#{$mainImagePath}/cursor.svg);
+  background-image: url(#{$mainImagePath}/cursor.svg);
+  background-repeat: no-repeat;
   background-size: cover;
   pointer-events: none;
-  @include transition(transform .25s ease-out);
+  display: none;
+  @include transition(all .25s ease-out);
+
+  @media (min-width: 1024px) {
+    display: block;
+  }
+
+  &--drag {
+    background-image: url(#{$mainImagePath}/cursor-drag.png);
+    width: 75px;
+    height: 75px;
+  }
 }

@@ -90,14 +90,14 @@
                     <div class="form__col">
                         <div class="def-input" data-aos="fade-up">
                             <span class="def-input__label">First Name</span>
-                            <input type="text" placeholder="Christian" value=""/>
+                            <input type="text" placeholder="Christian" value="" required/>
                             <span></span>
                         </div>
                     </div>
                     <div class="form__col">
                         <div class="def-input" data-aos="fade-up" data-aos-delay="30">
                             <span class="def-input__label">Last Name</span>
-                            <input type="text" placeholder="Jameson" value=""/>
+                            <input type="text" placeholder="Jameson" value="" required/>
                             <span></span>
                         </div>
                     </div>
@@ -105,15 +105,15 @@
                 <div class="form__row flex flex--wrap">
                     <div class="form__col">
                         <div class="def-input" data-aos="fade-up" data-aos-delay="60">
-                            <span class="def-input__label">Email</span>
-                            <input type="text" placeholder="+1 (757) 000-8020" value=""/>
+                            <span class="def-input__label">Contact Number</span>
+                            <input type="text" class="js-validate-number" placeholder="+1 (757) 000-8020" value="" required/>
                             <span></span>
                         </div>
                     </div>
                     <div class="form__col">
                         <div class="def-input" data-aos="fade-up" data-aos-delay="90">
-                            <span class="def-input__label">Contact Number</span>
-                            <input type="text" placeholder="your@mail.com " value=""/>
+                            <span class="def-input__label">Email</span>
+                            <input type="email" placeholder="your@mail.com " value="" required/>
                             <span></span>
                         </div>
                     </div>

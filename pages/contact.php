@@ -67,28 +67,28 @@
                         <div class="form__row" data-aos="fade-right" data-aos-offset="200">
                             <div class="def-input def-input--secondary">
                                 <span class="def-input__label">First Name</span>
-                                <input type="text" placeholder="Christian" value=""/>
+                                <input type="text" placeholder="Christian" value="" required/>
                                 <span></span>
                             </div>
                         </div>
                         <div class="form__row" data-aos="fade-right" data-aos-offset="230">
                             <div class="def-input def-input--secondary">
                                 <span class="def-input__label">Last Name</span>
-                                <input type="text" placeholder="Jameson" value=""/>
+                                <input type="text" placeholder="Jameson" value="" required/>
                                 <span></span>
                             </div>
                         </div>
                         <div class="form__row" data-aos="fade-right" data-aos-offset="260">
                             <div class="def-input def-input--secondary">
-                                <span class="def-input__label">Email</span>
-                                <input type="text" placeholder="+1 (757) 000-8020" value=""/>
+                                <span class="def-input__label">Contact Number</span>
+                                <input type="text" class="js-validate-number" placeholder="+1 (757) 000-8020" value="" required/>
                                 <span></span>
                             </div>
                         </div>
                         <div class="form__row" data-aos="fade-right" data-aos-offset="290">
                             <div class="def-input def-input--secondary">
-                                <span class="def-input__label">Contact Number</span>
-                                <input type="text" placeholder="your@mail.com " value=""/>
+                                <span class="def-input__label">Email</span>
+                                <input type="email" placeholder="your@mail.com " value="" required/>
                                 <span></span>
                             </div>
                         </div>

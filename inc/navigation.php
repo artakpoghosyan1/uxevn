@@ -1,12 +1,12 @@
 <div class="navigation bg-dark" id="navWrapper">
     <div class="navigation__inner">
-        <div class="navigation__top flex justify--space-between align-items--center">
+        <div class="navigation__top flex justify--space-between align-items--center js-to-left">
             <span class="logo bg-contain"><a href="/#homeSection" class="scroll-page"><i class="icon-logo"></i></a></span>
-            <span class="navigation__close nav-close" id="navButton" onclick="toggleClass('navWrapper')"></span>
+            <span class="navigation__close nav-close react-to-cursor" id="closeNavButton"></span>
         </div>
         <div class="navigation__content">
             <div class="navigation__menu scroll">
-                <div>
+                <div class="js-to-left">
                     <p class="navigation__title">
                         <span>Hello</span><span>there</span>
                         <span class="navigation__icon"><img src="images/hand.svg" alt=""></span>
@@ -18,13 +18,13 @@
                         <span class="def-button__inner">buy tickets</span>
                     </a>
                 </div>
-                <div>
+                <div class="js-to-left">
                     <p class="navigation__subtitle">Menu</p>
                     <?php include('menu.php'); ?>
                 </div>
                 <div class="hide-for-mobile">
-                    <p class="navigation__subtitle">Social</p>
-                    <ul class="menu-list menu-list--secondary">
+                    <p class="navigation__subtitle js-to-left">Social</p>
+                    <ul class="menu-list menu-list--secondary js-to-left">
                         <li><a href="">Facebook</a></li>
                         <li><a href="">Telegram</a></li>
                         <li><a href="">Linkedin</a></li>

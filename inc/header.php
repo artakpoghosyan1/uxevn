@@ -6,7 +6,7 @@
             <div class="header__date"><span>22</span>/<span>23</span></div>
         </div>
         <div class="header__nav">
-            <span class="nav-button js-hover-reaction" id="navButton" onclick="toggleClass('navWrapper')">
+            <span class="nav-button js-hover-reaction react-to-cursor" id="navButton">
                 <span class="nav-button__inner"></span>
             </span>
         </div>

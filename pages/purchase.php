@@ -236,14 +236,14 @@
                                 <div class="form__col">
                                     <div class="def-input">
                                         <span class="def-input__label">First Name</span>
-                                        <input type="text" placeholder="Christian" value=""/>
+                                        <input type="text" placeholder="Christian" value="" required/>
                                         <span></span>
                                     </div>
                                 </div>
                                 <div class="form__col">
                                     <div class="def-input">
                                         <span class="def-input__label">Last Name</span>
-                                        <input type="text" placeholder="Jameson" value=""/>
+                                        <input type="text" placeholder="Jameson" value="" required/>
                                         <span></span>
                                     </div>
                                 </div>
@@ -252,14 +252,14 @@
                                 <div class="form__col">
                                     <div class="def-input">
                                         <span class="def-input__label">Email</span>
-                                        <input type="text" placeholder="name@website.com" value=""/>
+                                        <input type="text" placeholder="name@website.com" value="" required/>
                                         <span></span>
                                     </div>
                                 </div>
                                 <div class="form__col">
                                     <div class="def-input">
                                         <span class="def-input__label">Contact Number</span>
-                                        <input type="text" placeholder="Where you work" value=""/>
+                                        <input type="text" placeholder="Where you work" value="" required/>
                                         <span></span>
                                     </div>
                                 </div>
@@ -268,14 +268,14 @@
                                 <div class="form__col">
                                     <div class="def-input">
                                         <span class="def-input__label">Company Name</span>
-                                        <input type="text" placeholder="+1 (757) 000-8020" value=""/>
+                                        <input type="text" placeholder="+1 (757) 000-8020" value="" required/>
                                         <span></span>
                                     </div>
                                 </div>
                                 <div class="form__col">
                                     <div class="def-input">
                                         <span class="def-input__label">Promo Code</span>
-                                        <input type="text" placeholder="Armenia" value=""/>
+                                        <input type="text" placeholder="Armenia" value="" required/>
                                         <span></span>
                                     </div>
                                 </div>
@@ -284,7 +284,7 @@
                                 <div class="form__col">
                                     <div class="def-input">
                                         <span class="def-input__label">Address</span>
-                                        <input type="text" placeholder="12th St. ABC Bldg.,Virginia Beach,VA USA" value=""/>
+                                        <input type="text" placeholder="12th St. ABC Bldg.,Virginia Beach,VA USA" value="" required/>
                                         <span></span>
                                     </div>
                                 </div>
