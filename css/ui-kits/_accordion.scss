@@ -1,24 +1,27 @@
+%accordionOpacity {
+  opacity: 0.4;
+}
+
 .accordion {
   $this: &;
   color: $white;
 
   &__row {
-    @extend .flex;
-    padding: 24px 0;
-    opacity: 0.4;
-    border-bottom: 1px solid $white;
-    @include flex-wrap(wrap);
     @include transition(opacity 0.3s);
-    
+    @extend %accordionOpacity;
+
     &:hover {
       cursor: pointer;
       opacity: 1;
+      #{$this}__action--disabled {
+        @extend %accordionOpacity;
+      }
     }
 
     &.active {
       opacity: 1;
 
-      #{$this}__action {
+      #{$this}__action:not(#{$this}__action--disabled) {
         i {
           &:before {
             content: '\e90f' !important;
@@ -26,6 +29,14 @@
         }
       }
     }
+  }
+
+  &__inner {
+    @include flex-wrap(wrap);
+    @extend .flex;
+    border-bottom: 1px solid $white;
+    padding: 24px 0;
+
   }
 
   &__title {
@@ -54,7 +65,8 @@
   &__action {
     padding-top: 15px;
     font-size: 32px;
-  }}
+  }
+}
 
 @media (max-width: 1440px) {
   .accordion {

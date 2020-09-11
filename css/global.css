@@ -229,7 +229,7 @@
 .display--inline-block {
   display: inline-block; }
 
-.flex, .row-flex, .navigation__inner, .navigation__content, .navigation__menu, .navigation__bottom, .info-list, .header__inner, .header__inner > div, .header__top, .accordion__row, .wrapper-section__top, .twits-carousel__item, .messenger-box, .about-workshop__item, .about-wrapper__inner, .speaker-list, .speaker-box:not(.speaker-box--sm) .speaker-box__info, .speaker-box__website, .speaker-box--sm, .speaker-box--secondary, .speaker-item-wrapper__inner, .speaker-item-wrapper__content, .speaker-item-wrapper__bottom, .talk-schedule__time, .schedule-list, .schedule-list--secondary .schedule-list__right, .schedule-list--secondary .schedule-list__items, .schedule-carousel .slick-track, .schedule-carousel .slick-slide, .schedule-box, .schedule-box__title, .schedule-box__time, .step-section__inner, .payment-section__inner, .ticket-block__discount, .ticket-info, .ticket-info__right, .payment-info__row, .contact-wrapper__content, .contact-wrapper__left, .contact-wrapper__right, .contact-list__row {
+.flex, .row-flex, .navigation__inner, .navigation__content, .navigation__menu, .navigation__bottom, .info-list, .header__inner, .header__inner > div, .header__top, .accordion__inner, .wrapper-section__top, .twits-carousel__item, .messenger-box, .about-workshop__item, .about-wrapper__inner, .speaker-list, .speaker-box:not(.speaker-box--sm) .speaker-box__info, .speaker-box__website, .speaker-box--sm, .speaker-box--secondary, .speaker-item-wrapper__inner, .speaker-item-wrapper__content, .speaker-item-wrapper__bottom, .talk-schedule__time, .schedule-list, .schedule-list--secondary .schedule-list__right, .schedule-list--secondary .schedule-list__items, .schedule-carousel .slick-track, .schedule-carousel .slick-slide, .schedule-box, .schedule-box__title, .schedule-box__time, .step-section__inner, .payment-section__inner, .ticket-block__discount, .ticket-info, .ticket-info__right, .payment-info__row, .contact-wrapper__content, .contact-wrapper__left, .contact-wrapper__right, .contact-list__row {
   display: flex;
   display: -webkit-box;
   display: -moz-box;
@@ -1804,14 +1804,12 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 768px) {
   .header {
     padding: 0 20px; } }
+.accordion__row, .accordion__row:hover .accordion__action--disabled {
+  opacity: 0.4; }
+
 .accordion {
   color: #ffffff; }
   .accordion__row {
-    padding: 24px 0;
-    opacity: 0.4;
-    border-bottom: 1px solid #ffffff;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
     -webkit-transition: opacity 0.3s;
     -ms-transition: opacity 0.3s;
     -moz-transition: opacity 0.3s;
@@ -1821,8 +1819,13 @@ h1, h2, h3, h4, h5, h6 {
       opacity: 1; }
     .accordion__row.active {
       opacity: 1; }
-      .accordion__row.active .accordion__action i:before {
+      .accordion__row.active .accordion__action:not(.accordion__action--disabled) i:before {
         content: '\e90f' !important; }
+  .accordion__inner {
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #ffffff;
+    padding: 24px 0; }
   .accordion__title {
     flex: 0.7;
     font-size: 16px;
@@ -3291,23 +3294,26 @@ sup {
     .ticket-info__form + .ticket-info__form {
       margin-top: 30px; }
 
-.payment-info-sticky-wrapper {
+.payment-info {
   position: sticky;
   top: 80px; }
-  .payment-info-sticky-wrapper__btn {
+  .payment-info--dynamic .payment-info__row span {
+    opacity: 50%; }
+  .payment-info--dynamic .payment-info__row--highlighted span {
+    opacity: 1; }
+  .payment-info__btn {
     margin-top: 40px; }
-
-.payment-info {
-  position: relative; }
-  .payment-info:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 13px;
-    background: url("../images/polygon.png") repeat-x;
-    background-size: contain; }
+  .payment-info__inner {
+    position: relative; }
+    .payment-info__inner:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 13px;
+      background: url("../images/polygon.png") repeat-x;
+      background-size: contain; }
   .payment-info__top {
     padding: 34px;
     font-size: 32px;

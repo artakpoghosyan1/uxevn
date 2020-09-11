@@ -172,49 +172,49 @@
                     </div>
                 </div>
                 <div class="payment-section__right">
-                    <div class="payment-info-sticky-wrapper">
+                    <div class="payment-info payment-info--dynamic">
                         <div class="payment-info bg-dark" data-aos="fade-up" data-aos-offset="150">
                             <div class="payment-info__top">
                                 <p>Overview</p>
                             </div>
                             <div class="payment-info__content">
-                                <div class="payment-info__row" data-aos="fade-up" data-aos-offset="250">
+                                <div class="payment-info__row" data-aos="fade-up">
                                     <span>Conference</span>
                                     <span>
                                         <span class="js-conference-value">0</span> x $25
                                      </span>
                                 </div>
-                                <div class="payment-info__row" data-aos="fade-up" data-aos-offset="270">
+                                <div class="payment-info__row" data-aos="fade-up">
                                     <span>Smart Interface Design Patterns</span>
                                     <span>
                                         <span class="js-workshop1-value">0</span> x $35
                                      </span>
                                 </div>
-                                <div class="payment-info__row" data-aos="fade-up" data-aos-offset="290">
+                                <div class="payment-info__row" data-aos="fade-up">
                                     <span>Getting Started with Lean Experimentation</span>
                                     <span>
                                         <span class="js-workshop2-value">0</span> x $35
                                     </span>
                                 </div>
-                                <div class="payment-info__row" data-aos="fade-up" data-aos-offset="310">
+                                <div class="payment-info__row" data-aos="fade-up">
                                     <span>Conference + Workshop: <br/>Smart Interface Design Patterns</span>
                                     <span>
                                         <span class="js-bundle1-value">0</span> x $45
                                     </span>
                                 </div>
-                                <div class="payment-info__row" data-aos="fade-up" data-aos-offset="330">
+                                <div class="payment-info__row" data-aos="fade-up">
                                     <span>Conference + Workshop: <br/>Getting Started with Lean Experimentation</span>
                                     <span>
                                         <span class="js-bundle2-value">0</span> x $40
                                     </span>
                                 </div>
-                                <div class="payment-info__row" data-aos="fade-up" data-aos-offset="350">
+                                <div class="payment-info__row" data-aos="fade-up">
                                     <span>Price</span>
                                     <span>
                                         $<span class="js-overview-price">0</span>
                                     </span>
                                 </div>
-                                <div class="payment-info__row" data-aos="fade-up" data-aos-offset="370">
+                                <div class="payment-info__row" data-aos="fade-up">
                                     <span>
                                         Discount <span class="js-discount-value"></span>
                                     </span>
@@ -222,16 +222,16 @@
                                         - $<span class="js-discount-total">0</span>
                                     </span>
                                 </div>
-                                <div class="payment-info__row payment-info__total" data-aos="fade-up" data-aos-offset="390">
+                                <div class="payment-info__row payment-info__total" data-aos="fade-up">
                                     <span>Total price</span>
                                     <span>
-                                        $<span class="overview-total">0</span>
+                                        $<span class="js-overview-total">0</span>
                                     </span>
                                 </div>
                             </div>
                         </div>
 
-                        <a href="#buyTicketSection" class="def-button def-button--full payment-info-sticky-wrapper__btn def-button--fourth js-hover-reaction" data-aos="fade-up"  data-aos-offset="0">
+                        <a href="#buyTicketSection" class="def-button def-button--full payment-info__btn def-button--fourth js-hover-reaction" data-aos="fade-up"  data-aos-offset="0">
                             <span class="def-button__inner">Continue</span>
                         </a>
                     </div>

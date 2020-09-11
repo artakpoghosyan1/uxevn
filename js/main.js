@@ -72,27 +72,33 @@ favorites.forEach((item) => {
     });
 });
 
-
 /*faq accordion */
+(function () {
+    var accButton = document.getElementsByClassName("accordion__row");
 
-var accButton = document.getElementsByClassName("accordion__row");
+    for (var i = 0; i < accButton.length; i++) {
+        let panel = accButton[i].querySelector('.accordion__description');
 
-var i;
-
-for (i = 0; i < accButton.length; i++) {
-    accButton[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        var panel = this.closest('div').children.item(1);
-        if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
-        } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
+        if (panel.scrollHeight <= panel.offsetHeight) {
+            accButton[i].querySelector('.accordion__action').classList.add('accordion__action--disabled')
         }
-    });
-}
 
-function findAncestor (el, cls) {
-    while ((el = el.parentElement) && !el.classList.contains(cls));
+        accButton[i].addEventListener("click", function () {
+            this.classList.remove("active");
+
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            }
+            if (panel.scrollHeight > panel.offsetHeight) {
+                this.classList.add("active");
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    }
+})()
+
+function findAncestor(el, cls) {
+    while ((el = el.parentElement) && !el.classList.contains(cls)) ;
     return el;
 }
 
@@ -124,11 +130,11 @@ function findAncestor (el, cls) {
             }
         }
 
-        if (e.target.classList.contains('slick-list') || findAncestor(e.target,'slick-list')) {
+        if (e.target.classList.contains('slick-list') || findAncestor(e.target, 'slick-list')) {
             cursor.classList.add('cursor--drag')
             isDraggable = true
         } else {
-            if(isDraggable) {
+            if (isDraggable) {
                 cursor.classList.remove('cursor--drag')
             }
         }
@@ -136,11 +142,10 @@ function findAncestor (el, cls) {
 
     document.addEventListener("mousemove", e => calculatePositions(e));
     window.addEventListener("scroll", e => {
-        if((window.scrollY + window.innerHeight) > top) {
+        if ((window.scrollY + window.innerHeight) > top) {
             top = window.scrollY
         }
     });
-
 
 
     const render = () => {
@@ -154,22 +159,65 @@ function numberValidate(value) {
     return value.replace(/\D|^0+/g, '')
 }
 
-
-// ticket input calculation
 (function () {
     $(document).on("input", ".js-validate-number", function () {
         this.value = numberValidate(this.value)
     });
 })();
 
+// ticket input calculation
 (function () {
-    $(document).on("input", ".js-ticket-count", function () {
+    var ticketInputValues = {}
+
+    $(document).on('input', '.js-ticket-count', function () {
         this.value = numberValidate(this.value)
 
-        $(`.${this.id}-value`)[0].innerText = this.value || 0
-        var overviewPrice = $('.js-overview-price')[0]
-        var fieldPrice = $(`.${this.id}-hidden`)[0].value
+        ticketInputValues[this.id] = parseInt(this.value)
 
-        overviewPrice.innerText = parseInt(overviewPrice.innerText || 0) + (parseInt(this.value || 0) * fieldPrice)
+        if (ticketInputValues.hasOwnProperty(this.id) && !parseInt(this.value)) {
+            delete ticketInputValues[this.id]
+        }
+
+        var overviewPrice = $('.js-overview-price')[0]
+        var overviewTotal = $('.js-overview-total')[0]
+        var overviewField = $(`.${this.id}-value`)[0]
+
+        overviewField.innerText = this.value || 0
+
+        var isAnyFieldValue = !!Object.keys(ticketInputValues).length
+        toggleOverviewFieldsHighlighted([overviewField, overviewPrice, overviewTotal], this.value, isAnyFieldValue)
+
+        overviewPrice.innerText = calculateTotal(ticketInputValues)
     });
+
+    function calculateTotal(fieldsValues) {
+        return Object.keys(fieldsValues).reduce(function (acc, currentKey) {
+            return acc + fieldsValues[currentKey]
+        }, 0)
+    }
+
+    function toggleOverviewFieldsHighlighted(fields, inputValue, isAnyFieldValue) {
+        fields.map(function (field) {
+            field.closest('div').classList.add('payment-info__row--highlighted')
+
+            if (!inputValue) {
+                if ((field.classList.contains('js-overview-price') ||
+                    field.classList.contains('js-overview-total')) && isAnyFieldValue) {
+                    return
+                }
+
+                field.closest('div').classList.remove('payment-info__row--highlighted')
+            }
+        })
+    }
+})();
+
+// timezone
+(function() {
+    // var options = {
+    //     hour: 'numeric', minute: 'numeric', second: 'numeric',
+    //     timeZone: 'MET',
+    // };
+    //
+    // new Intl.DateTimeFormat('en-AU', options).format(new Date())
 })();

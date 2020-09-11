@@ -267,29 +267,43 @@
   }
 }
 
-.payment-info-sticky-wrapper {
+.payment-info {
   position: sticky;
   top: 80px;
+
+  &--dynamic {
+    .payment-info__row {
+      span {
+        opacity: 50%;
+      }
+
+      &--highlighted {
+        span {
+          opacity: 1;
+        }
+      }
+    }
+  }
 
   &__btn {
     margin-top: 40px;
   }
-}
 
-.payment-info {
-  position: relative;
+  &__inner {
+    position: relative;
 
-  &:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 13px;
-    background: url('#{$mainImagePath}/polygon.png') repeat-x;
-    background-size: contain;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 13px;
+      background: url('#{$mainImagePath}/polygon.png') repeat-x;
+      background-size: contain;
+    }
+
   }
-
   &__top {
     padding: 34px;
     font-size: 32px;
@@ -324,6 +338,7 @@
     font-size: 26px;
   }
 }
+
 
 .form-section {
   &__inner {
