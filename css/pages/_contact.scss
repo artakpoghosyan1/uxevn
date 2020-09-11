@@ -76,7 +76,6 @@
     @extend .flex;
     margin-bottom: 40px;
     @include align-items(center);
-    @include flex-wrap(wrap);
 
     &:last-child {
       margin-bottom: 0 !important;

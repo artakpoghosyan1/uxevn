@@ -53,7 +53,7 @@
     <div class="sponsor-wrapper__bottom">
         <div class="inner-wrapper">
             <div class="contact-list contact-list--secondary">
-                <div class="contact-list__row">
+                <div class="contact-list__row flex--wrap">
                     <div class="contact-list__col">
                       <span class="contact-list__info" data-aos="fade-up" data-aos-offset="170">
                         <span class="contact-list__label">EMAIL</span>
