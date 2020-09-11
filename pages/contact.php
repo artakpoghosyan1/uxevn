@@ -47,7 +47,7 @@
                          </span>
                     </div>
                     <div class="contact-list__row">
-                        <span class="contact-list__info" data-aos="fade-up" data-aos-offset="190">
+                        <span class="contact-list__info" data-aos="fade-up">
                             <span class="contact-list__label">Social media</span>
                             <ul class="social-list inline-elements">
                                 <li><a href="" target="_blank"><i class="icon-telegram"></i></a></li>
