@@ -49,7 +49,7 @@
     }
   }
 
-  &--secondary {
+  &--secondary, &--fifth {
     border-color: $black;
 
     #{$this}__inner {
@@ -78,6 +78,10 @@
 
   &--fourth {
     border-color: $black;
+  }
+
+  &--fifth {
+    border-color: $white;
   }
 
   &--white {

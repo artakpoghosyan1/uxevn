@@ -396,6 +396,9 @@
 .color-black {
   color: #0E162C; }
 
+.color-grey {
+  color: rgba(14, 22, 44, 0.6); }
+
 .color-red {
   color: #FF0000; }
 
@@ -1052,9 +1055,9 @@ h1, h2, h3, h4, h5, h6 {
     .def-button--primary .def-button__inner {
       border-color: #ffffff;
       background-color: #ffffff; }
-  .def-button--secondary {
+  .def-button--secondary, .def-button--fifth {
     border-color: #0E162C; }
-    .def-button--secondary .def-button__inner {
+    .def-button--secondary .def-button__inner, .def-button--fifth .def-button__inner {
       border-color: #0E162C;
       background-color: #0E162C; }
   .def-button--tertiary {
@@ -1069,6 +1072,8 @@ h1, h2, h3, h4, h5, h6 {
       background-color: #4873EC; }
   .def-button--fourth {
     border-color: #0E162C; }
+  .def-button--fifth {
+    border-color: #ffffff; }
   .def-button--white .def-button__inner {
     background: #ffffff;
     color: #0E162C; }
@@ -1361,7 +1366,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 auto; }
   .navigation__bottom {
     padding: 25px 40px;
-    border-top: 1px solid rgba(255, 255, 255, 0.6);
+    border-top: 1px solid rgba(255, 255, 255, 0.13);
     flex: 100% !important;
     margin-top: auto;
     -webkit-align-items: center;
@@ -3218,7 +3223,7 @@ sup {
 .ticket-block__title {
   font-size: 24px;
   font-family: primary-bold;
-  color: #8754DB;
+  color: #4873EC;
   margin-bottom: 30px;
   text-transform: uppercase; }
 .ticket-block__discount {
@@ -3248,8 +3253,8 @@ sup {
     font-size: 20px;
     line-height: 30px; }
     .ticket-info p.ticket-info__name {
-      font-size: 26px;
-      line-height: 32px;
+      font-size: 24px;
+      line-height: 30px;
       font-family: primary-bold;
       margin-bottom: 12px; }
     .ticket-info p.ticket-info__time {
@@ -3297,7 +3302,7 @@ sup {
   .payment-info:after {
     content: '';
     position: absolute;
-    bottom: -2px;
+    bottom: 0;
     left: 0;
     right: 0;
     height: 13px;
@@ -3320,6 +3325,8 @@ sup {
       white-space: nowrap;
       padding-left: 10px;
       font-family: primary-bold; }
+    .payment-info__row.disabeled {
+      opacity: 0.5; }
   .payment-info__total {
     font-family: primary-bold;
     font-size: 26px; }

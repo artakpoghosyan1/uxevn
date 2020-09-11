@@ -108,7 +108,7 @@
   &__bottom {
     @extend .flex;
     padding: 25px 40px;
-    border-top: 1px solid rgba($white, 0.6);
+    border-top: 1px solid rgba($white, 0.13);
     flex: 100% !important;
     margin-top: auto;
     @include align-items(center);

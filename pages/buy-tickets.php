@@ -7,14 +7,14 @@
                         <p class="step-box__number">Step 1</p>
                         <p class="step-box__title">Order your ticket</p>
                         <p class="step-box__description">
-                            <strong>Start by ordering your ticket(s) below</strong>. Enter number of tickets and attendee details
+                            <strong>Enter attendee details and the number of tickets</strong>
                         </p>
                     </div>
                 </div>
                 <div class="step-section__item" data-aos="fade-right" data-aos-delay="200">
                     <div class="step-box">
                         <p class="step-box__number">Step 2</p>
-                        <p class="step-box__title">Order your ticket</p>
+                        <p class="step-box__title">Pay</p>
                         <p class="step-box__description">
                             <strong>Start by ordering your ticket(s) below</strong>. Enter number of tickets and attendee details
                         </p>
@@ -25,14 +25,14 @@
                         <p class="step-box__number">Step 3</p>
                         <p class="step-box__title">Order your ticket</p>
                         <p class="step-box__description">
-                            <strong>Start by ordering your ticket(s) below</strong>. Enter number of tickets and attendee details
+                            You will receive an email stating your successful payment.
                         </p>
                     </div>
                 </div>
                 <div class="step-section__item" data-aos="fade-right" data-aos-delay="300">
                     <div class="step-box">
                         <p class="step-box__number">Step 4</p>
-                        <p class="step-box__title">Order your ticket</p>
+                        <p class="step-box__title">Wait for Extra Email</p>
                         <p class="step-box__description">
                             <strong>Start by ordering your ticket(s) below</strong>. Enter number of tickets and attendee details
                         </p>
@@ -66,7 +66,7 @@
                                     <div class="ticket-info__left" data-aos="fade-up" data-aos-offset="30">
                                         <p class="ticket-info__name">Conference</p>
                                         <p>Early / <strong>$25</strong></p>
-                                        <p>Regular / <strong>$35</strong></p>
+                                        <p class="color-grey">Regular / <strong>$35</strong></p>
                                     </div>
                                     <div class="ticket-info__right" data-aos="fade-up" data-aos-offset="30">
                                         <span class="ticket-info__price">$25 x</span>
@@ -95,9 +95,9 @@
                             <div class="ticket-block__item">
                                 <div class="ticket-info">
                                     <div class="ticket-info__left" data-aos="fade-up" data-aos-offset="30">
-                                        <p class="ticket-info__name">Workshop #1</p>
+                                        <p class="ticket-info__name">Smart Interface Design Patterns</p>
                                         <p>Early / <strong>$35</strong></p>
-                                        <p>Regular / <strong>$45</strong></p>
+                                        <p class="color-grey">Regular / <strong>$45</strong></p>
                                     </div>
                                     <div class="ticket-info__right" data-aos="fade-up" data-aos-offset="30">
                                         <span class="ticket-info__price">$35 x</span>
@@ -113,12 +113,12 @@
                             <div class="ticket-block__item">
                                 <div class="ticket-info">
                                     <div class="ticket-info__left" data-aos="fade-up" data-aos-offset="30">
-                                        <p class="ticket-info__name">Workshop #2</p>
-                                        <p>Early / <strong>$30</strong></p>
-                                        <p>Regular / <strong>$40</strong></p>
+                                        <p class="ticket-info__name">Getting Started with Lean Experimentation</p>
+                                        <p>Early / <strong>$35</strong></p>
+                                        <p class="color-grey">Regular / <strong>$45</strong></p>
                                     </div>
                                     <div class="ticket-info__right" data-aos="fade-up" data-aos-offset="30">
-                                        <span class="ticket-info__price">$30 x</span>
+                                        <span class="ticket-info__price">$35 x</span>
                                         <input type="text" hidden value="30" class="js-workshop2-hidden"/>
 
                                         <div class="ticket-info__input">
@@ -134,9 +134,9 @@
                             <div class="ticket-block__item">
                                 <div class="ticket-info">
                                     <div class="ticket-info__left" data-aos="fade-up" data-aos-offset="30">
-                                        <p class="ticket-info__name">Conference + Workshop #1</p>
+                                        <p class="ticket-info__name">Conference + Workshop: <br/>Smart Interface Design Patterns</p>
                                         <p>Early / <strong>$45</strong></p>
-                                        <p>Regular / <strong>$65</strong></p>
+                                        <p class="color-grey">Regular / <strong>$65</strong></p>
                                     </div>
                                     <div class="ticket-info__right" data-aos="fade-up" data-aos-offset="30">
                                         <span class="ticket-info__price">$45 x</span>
@@ -152,12 +152,13 @@
                             <div class="ticket-block__item">
                                 <div class="ticket-info">
                                     <div class="ticket-info__left" data-aos="fade-up" data-aos-offset="30">
-                                        <p class="ticket-info__name">Conference + Workshop #2</p>
-                                        <p>Early / <strong>$40</strong></p>
-                                        <p>Regular / <strong>$60</strong></p>
+                                        <p class="ticket-info__name">Conference + Workshop:
+                                            Getting Started with Lean Experimentation</p>
+                                        <p>Early / <strong>$45</strong></p>
+                                        <p class="color-grey">Regular / <strong>$65</strong></p>
                                     </div>
                                     <div class="ticket-info__right" data-aos="fade-up" data-aos-offset="30">
-                                        <span class="ticket-info__price">$40 x</span>
+                                        <span class="ticket-info__price">$45 x</span>
                                         <input type="text" hidden value="40" class="js-bundle2-hidden"/>
 
                                         <div class="ticket-info__input">
@@ -184,25 +185,25 @@
                                      </span>
                                 </div>
                                 <div class="payment-info__row" data-aos="fade-up" data-aos-offset="270">
-                                    <span>Workshop #1</span>
+                                    <span>Smart Interface Design Patterns</span>
                                     <span>
                                         <span class="js-workshop1-value">0</span> x $35
                                      </span>
                                 </div>
                                 <div class="payment-info__row" data-aos="fade-up" data-aos-offset="290">
-                                    <span>Workshop #2</span>
+                                    <span>Getting Started with Lean Experimentation</span>
                                     <span>
-                                        <span class="js-workshop2-value">0</span> x $30
+                                        <span class="js-workshop2-value">0</span> x $35
                                     </span>
                                 </div>
                                 <div class="payment-info__row" data-aos="fade-up" data-aos-offset="310">
-                                    <span>Conference + Workshop #1</span>
+                                    <span>Conference + Workshop: <br/>Smart Interface Design Patterns</span>
                                     <span>
                                         <span class="js-bundle1-value">0</span> x $45
                                     </span>
                                 </div>
                                 <div class="payment-info__row" data-aos="fade-up" data-aos-offset="330">
-                                    <span>Conference + Workshop #2</span>
+                                    <span>Conference + Workshop: <br/>Getting Started with Lean Experimentation</span>
                                     <span>
                                         <span class="js-bundle2-value">0</span> x $40
                                     </span>

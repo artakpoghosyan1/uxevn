@@ -74,7 +74,7 @@
                                                 <div class="ticket-info__left">
                                                     <p class="ticket-info__name">Conference</p>
                                                     <p>Early / <strong>$25</strong></p>
-                                                    <p>Regular / <strong>$35</strong></p>
+                                                    <p class="color-grey" class="color-grey">Regular / <strong>$35</strong></p>
                                                 </div>
                                                 <div class="ticket-info__right">
                                                     <span class="ticket-info__price">$25 x 3</span>
@@ -104,9 +104,9 @@
                                         <div class="ticket-block__item">
                                             <div class="ticket-info">
                                                 <div class="ticket-info__left">
-                                                    <p class="ticket-info__name">Workshop #1</p>
+                                                    <p class="ticket-info__name">Smart Interface Design Patterns</p>
                                                     <p>Early / <strong>$35</strong></p>
-                                                    <p>Regular / <strong>$45</strong></p>
+                                                    <p class="color-grey">Regular / <strong>$45</strong></p>
                                                 </div>
                                                 <div class="ticket-info__right">
                                                     <span class="ticket-info__price">$35 x 4</span>
@@ -125,12 +125,12 @@
                                         <div class="ticket-block__item">
                                             <div class="ticket-info">
                                                 <div class="ticket-info__left">
-                                                    <p class="ticket-info__name">Workshop #2</p>
-                                                    <p>Early / <strong>$30</strong></p>
-                                                    <p>Regular / <strong>$40</strong></p>
+                                                    <p class="ticket-info__name">Getting Started with Lean Experimentation</p>
+                                                    <p>Early / <strong>$35</strong></p>
+                                                    <p class="color-grey">Regular / <strong>$45</strong></p>
                                                 </div>
                                                 <div class="ticket-info__right">
-                                                    <span class="ticket-info__price">$30 x 2</span>
+                                                    <span class="ticket-info__price">$35 x 2</span>
                                                 </div>
                                                 <p class="ticket-info__time"><span>Early bird price ends on</span> 09/10/2020</p>
                                             </div>
@@ -149,9 +149,9 @@
                                         <div class="ticket-block__item">
                                             <div class="ticket-info">
                                                 <div class="ticket-info__left">
-                                                    <p class="ticket-info__name">Conference + Workshop #1</p>
+                                                    <p class="ticket-info__name">Conference + Workshop: <br/>Smart Interface Design Patterns</p>
                                                     <p>Early / <strong>$45</strong></p>
-                                                    <p>Regular / <strong>$65</strong></p>
+                                                    <p class="color-grey">Regular / <strong>$65</strong></p>
                                                 </div>
                                                 <div class="ticket-info__right">
                                                     <span class="ticket-info__price">$45 x 2</span>
@@ -170,12 +170,12 @@
                                         <div class="ticket-block__item">
                                             <div class="ticket-info">
                                                 <div class="ticket-info__left">
-                                                    <p class="ticket-info__name">Conference + Workshop #2</p>
-                                                    <p>Early / <strong>$40</strong></p>
-                                                    <p>Regular / <strong>$60</strong></p>
+                                                    <p class="ticket-info__name">Conference + Workshop: <br/>Getting Started with Lean Experimentation</p>
+                                                    <p>Early / <strong>$45</strong></p>
+                                                    <p class="color-grey">Regular / <strong>$65</strong></p>
                                                 </div>
                                                 <div class="ticket-info__right">
-                                                    <span class="ticket-info__price">$40 x 3</span>
+                                                    <span class="ticket-info__price">$45 x 3</span>
                                                 </div>
                                                 <p class="ticket-info__time"><span>Early bird price ends on</span> 09/10/2020</p>
                                             </div>
@@ -199,12 +199,34 @@
                                         </div>
                                         <div class="payment-info__content">
                                             <div class="payment-info__row">
-                                                <span>Conference + Workshop #1</span>
-                                                <span>10 x $45</span>
+                                                <span>Conference</span>
+                                                <span>
+                                                    <span>3</span> x $25
+                                                 </span>
                                             </div>
                                             <div class="payment-info__row">
-                                                <span>Conference + Workshop #2</span>
-                                                <span>10 x $40</span>
+                                                <span>Smart Interface Design Patterns</span>
+                                                <span>
+                                                    <span>4</span> x $35
+                                                 </span>
+                                            </div>
+                                            <div class="payment-info__row">
+                                                <span>Getting Started with Lean Experimentation</span>
+                                                <span>
+                                                    <span>2</span> x $35
+                                                </span>
+                                            </div>
+                                            <div class="payment-info__row">
+                                                <span>Conference + Workshop: <br/>Smart Interface Design Patterns</span>
+                                                <span>
+                                                    <span>2</span> x $45
+                                                </span>
+                                            </div>
+                                            <div class="payment-info__row">
+                                                <span>Conference + Workshop: <br/>Getting Started with Lean Experimentation</span>
+                                                <span>
+                                                    <span>3</span> x $40
+                                                </span>
                                             </div>
                                             <div class="payment-info__row">
                                                 <span>Price</span>

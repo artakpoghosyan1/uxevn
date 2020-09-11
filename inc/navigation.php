@@ -15,7 +15,7 @@
                     <p class="navigation__description">
                         Our goal is to ensure annual conferences with various world-class professionals to create disciples, connect big and small design communities, and level up skills and mindsets for all the tech specialists where user experience is crucial.
                     </p>
-                    <a href="#buyTicketSection" class="navigation__button def-button def-button--primary scroll-page hide-for-mobile">
+                    <a href="#buyTicketSection" class="navigation__button def-button def-button--tertiary scroll-page hide-for-mobile">
                         <span class="def-button__inner">buy tickets</span>
                     </a>
                 </div>

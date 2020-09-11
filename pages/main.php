@@ -8,7 +8,9 @@
             <img src="images/logo.svg" alt="">
         </div>
         <div class="main-wrapper">
-            <a href="#buyTicketSection" class="def-button def-button--tertiary hide-for-tablet scroll-page js-hover-reaction">buy tickets</a>
+            <a href="#buyTicketSection" data-aos="fade-up" data-aos-offset="50" class="def-button def-button--fifth scroll-page hide-for-tablet scroll-page js-hover-reaction">
+                <span class="def-button__inner">buy tickets</span>
+            </a>
             <!--    <span class="messenger-box">-->
             <!--        <span class="messenger-box__icon">-->
             <!--            <i class="icon-messenger"></i>-->
@@ -63,23 +65,7 @@
 </section>
 <div class="twits-wrapper">
     <div class="twits-wrapper__inner inner-wrapper">
-        <div class="slider twits-carousel" data-aos="fade-up">
-            <?php for($i=1; $i<=6; $i++ ) { ?>
-                <div>
-                    <div class="twits-carousel__item" onclick="window.open('/', '_blank')">
-                        <div class="twits-carousel__img bg-cover" style="background-image: url('images/speakers/ani.png')"></div>
-                        <div class="twits-carousel__top">
-                            <span>arshak. <a href="">@rmmmaerd</a></span>
-                            <span> Oct 11, 2015</span>
-                        </div>
-                        <div class="twits-carousel__info">
-                            <span>Just got an awesome presentation about CSS flexbox from Vitaly Friedman. </span>
-                            <span><a href="">#uxevn #uxyerevan</a></span>
-                        </div>
-                    </div>
-                </div>
-            <?php } ?>
-        </div>
+        <?php include('inc/twitts.php'); ?>
     </div>
 </div>
 <section class="wrapper-section" id="sponsorSection">
