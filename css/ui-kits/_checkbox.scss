@@ -49,19 +49,3 @@
     }
   }
 }
-
-@media (max-width: 768px) {
-  .def-checkbox {
-    &__text {
-      font-size: 13px;
-    }
-  }
-}
-
-@media (max-width: 540px) {
-  .def-checkbox {
-    &__text {
-      font-size: 12px;
-    }
-  }
-}

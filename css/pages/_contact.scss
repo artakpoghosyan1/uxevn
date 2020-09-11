@@ -76,6 +76,7 @@
     @extend .flex;
     margin-bottom: 40px;
     @include align-items(center);
+    @include flex-wrap(wrap);
 
     &:last-child {
       margin-bottom: 0 !important;
@@ -239,6 +240,9 @@
     &__left {
       padding: 0 20px;
       margin-bottom: 40px;
+    }
+    &__right {
+      padding: 40px 20px;
     }
     &__form {
       max-width: initial;

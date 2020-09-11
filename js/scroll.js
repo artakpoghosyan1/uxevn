@@ -30,16 +30,21 @@ $(window).scroll(function(event) {
             curLink.addClass('active');
 
             if (curLink.attr('href') === '#homeSection') {
-                $('.page-wrapper').addClass('main-page').removeClass('dark-theme');
+                $('.page-wrapper').addClass('main-page');
             }
-            else if (curLink.attr('href') === '#aboutSection' || curLink.attr('href') === '#workshopSection'
-                    || curLink.attr('href') === '#contactSection' || curLink.attr('href') === '#sponsorSection') {
+            if (curLink.attr('href') !== '#homeSection') {
                 $('.page-wrapper').removeClass('main-page');
-                $('.page-wrapper').addClass('dark-theme');
             }
-            else {
-                $('.page-wrapper').removeClass('main-page');
-                $('.page-wrapper').removeClass('dark-theme');
+
+            if ($(window).width() < 993) {
+                if (curLink.attr('href') === '#aboutSection' || curLink.attr('href') === '#workshopSection'
+                        || curLink.attr('href') === '#sponsorSection') {
+                    $('.page-wrapper').addClass('dark-theme');
+                    $('.page-wrapper').removeClass('main-page');
+                }
+                else {
+                    $('.page-wrapper').removeClass('dark-theme');
+                }
             }
 
         } else {
@@ -47,15 +52,17 @@ $(window).scroll(function(event) {
         }
     });
 
-    $('a.def-button').each(function() {
-        var curLink = $(this);
-        var refElement = $(curLink.attr('href'));
-
-        if (refElement.position().top <= scrollPos + 60) {
-            if (curLink.attr('href') === '#buyTicketSection') {
-                $('.page-wrapper').addClass('dark-theme');
-            }
-        }
-    });
+    // $('a.def-button').each(function() {
+    //     var curLink = $(this);
+    //     var refElement = $(curLink.attr('href'));
+    //
+    //     if (refElement.position().top <= scrollPos + 60) {
+    //         if ($(window).width() < 993) {
+    //             if (curLink.attr('href') === '#buyTicketSection') {
+    //                 $('.page-wrapper').addClass('dark-theme');
+    //             }
+    //         }
+    //     }
+    // });
 });
 

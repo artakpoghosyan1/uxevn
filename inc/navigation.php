@@ -42,7 +42,7 @@
                     <li><a href="index.php?page=privacy-policy">Privacy and policy</a></li>
                 </ul>
                 <span class="navigation__terms">
-                    <span>Terms & Conditions: Tickets are non-refundable but transferable.</span>
+                    <span><a href="index.php?page=terms-and-conditions" class="underline-hover">Terms & Conditions</a>: Tickets are non-refundable but transferable.</span>
                     <span>Design2Science reserves the right to cancel or replace speakers.</span>
                 </span>
              </div>

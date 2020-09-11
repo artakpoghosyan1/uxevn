@@ -1,5 +1,44 @@
 .dark-theme {
   .header {
+    background-color: $white;
+
+    &__title, &__date {
+      color: $black;
+    }
+
+    .logo {
+      a{
+        color: $black;
+      }
+    }
+
+    .menu-list {
+      background-color: rgba($black, 0.1);
+
+      a {
+        &:before {
+          background-color: $black;
+        }
+      }
+    }
+  }
+
+  .logo-text {
+    color: $black;
+  }
+
+  .nav-button {
+    &:before, &:after, &__inner {
+      background-color: $black;
+    }
+  }
+}
+
+
+@media (min-width: 993px) {
+  .header {
+    background-color: $white;
+
     &__title, &__date {
       color: $black;
     }

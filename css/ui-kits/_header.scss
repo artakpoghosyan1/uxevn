@@ -1,5 +1,5 @@
 .header {
-  width: 156px;
+  width: 136px;
   padding: 60px 0;
   position: fixed;
   height: 100%;
@@ -76,7 +76,7 @@
     z-index: 2;
     top: 0;
     bottom: 0;
-    left: 156px;
+    left: 136px;
     margin: 0;
     @include flex-wrap(wrap);
     @include align-items(flex-start);
@@ -110,7 +110,6 @@
         @include transition(height 0.3s);
       }
 
-
       &.active {
         &:before {
           height: 100%;
@@ -123,8 +122,10 @@
 
 .main-page {
   .header {
-    &__text, &__top {
-      display: none !important;
+    &__top {
+      >div {
+        display: none;
+      }
     }
   }
 }
@@ -216,6 +217,10 @@
         font-size: 40px;
       }
     }
+
+    .logo-text {
+      margin-left: -7px;
+    }
   }
 }
 
@@ -262,18 +267,14 @@
 
   .main-page {
     .header {
-      background-color: transparent;
+      background-color: transparent !important;
 
       .logo {
-        display: none;
+        display: none !important;
       }
 
       &__date {
-        display: block;
-      }
-
-      &__top {
-        display: flex !important;
+        display: block !important;
       }
     }
   }

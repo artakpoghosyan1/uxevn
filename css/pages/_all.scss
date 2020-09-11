@@ -16,6 +16,7 @@
 
   min-height: 100vh;
   overflow: hidden;
+  position: relative;
   background-color: $white;
 
   &--main {
@@ -29,7 +30,7 @@
     }
   }
   &__inner {
-    padding-left: 156px;
+    padding-left: 136px;
     min-height: 100vh;
   }
   &__top {
@@ -39,6 +40,10 @@
     @include align-items(center);
     @include justify-content(space-between);
   }
+}
+
+.simple-wrapper {
+  padding-top: 80px
 }
 
 $inner-width: 1100px;
@@ -96,18 +101,19 @@ $inner-width: 1100px;
 
 .text-box {
   font-size: 22px;
-  line-height: 33px;
+  line-height: 36px;
 
   p {
-    margin-bottom: 30px;
-
-    &:last-child {
-      margin-bottom: 20px;
-    }
+    margin-bottom: 40px;
 
     strong {
       font-family: primary-bold;
     }
+  }
+
+  &--sm , &__sm{
+    font-size: 18px;
+    line-height: 32px;
   }
 }
 
@@ -190,7 +196,7 @@ $inner-width: 1100px;
 
 .twits-wrapper, .banner {
   background-color: $white;
-  padding: 50px 0 0 156px;
+  padding: 50px 0 0 136px;
 
   &__inner {
     max-width: initial;
@@ -459,6 +465,10 @@ sup {
     }
   }
 
+  .simple-wrapper {
+    padding-top: 60px
+  }
+
   .twits-wrapper, .banner {
     padding-left: 0;
   }
@@ -498,6 +508,10 @@ sup {
     &__top {
       padding: 20px 20px 0;
     }
+  }
+
+  .simple-wrapper {
+    padding-top: 40px
   }
 
   .inner-wrapper {

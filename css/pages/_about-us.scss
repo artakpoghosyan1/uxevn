@@ -2,9 +2,6 @@
 /* About Us */
 
 .about-wrapper {
-  font-size: 18px;
-  line-height: 32px;
-
   P {
     margin-bottom: 50px;
 
@@ -24,11 +21,6 @@
   }
   &__right {
     flex: 2;
-  }
-
-  &__description {
-    font-size: 22px;
-    line-height: 38px;
   }
 
   &__title {
@@ -70,24 +62,11 @@
   }
 }
 
-@media (max-width: 1440px) {
-  .about-wrapper {
-    &__description {
-      font-size: 28px;
-      line-height: 40px;
-    }
-  }
-}
 
 @media (max-width: 992px) {
   .about-wrapper {
     P {
       margin-bottom: 40px;
-    }
-
-    &__description {
-      font-size: 24px;
-      line-height: 38px;
     }
 
     &__bottom {
@@ -100,7 +79,7 @@
 @media (max-width: 768px) {
   .about-wrapper {
     P {
-      margin-bottom: 24px;
+      margin-bottom: 30px;
     }
 
     &__left, &__right {
@@ -114,11 +93,6 @@
     &__left {
       padding-right: 0;
       margin-bottom: 30px;
-    }
-
-    &__description {
-      font-size: 22px;
-      line-height: 32px;
     }
 
     &__bottom {
