@@ -37,15 +37,26 @@
                     <div>
                         <p class="title title--secondary margin-bottom-medium-lg">About Speaker</p>
                         <div class="text-box">
-                            <p>John Zeratsky is a veteran technology designer, keynote speaker, and the bestselling author of Sprint and Make Time.</p>
-                            <p>John helps leaders, entrepreneurs, and professional teams make better use of their time at work and become happier, more engaged humans. As a speaker and facilitator, he has worked with more than 200 of the world’s most important and innovative organizations, including Google, Harvard University, Slack, IDEO, and Netflix.</p>
-                            <p>John has reached millions with his writing about resetting the defaults of busyness and distraction. He’s written two bestselling books and published articles in The Wall Street Journal, TIME, Harvard Business Review, Wired, Fast Company, and many other outlets.</p>
+                            <p>
+                                A Fellow of the Royal Society of Arts, named "one of the 50 most creative and influential minds" by Creativity magazine, Manuel Lima is the founder of VisualComplexity.com, Design Lead and Startup Mentor at Google, and a regular lecturer of data visualization at Parsons School of Design.
+                            </p>
+                            <p>
+                                He has over 15+ years of experience designing digital experiences and leading product teams at companies like Google, Microsoft, Nokia, and R/GA. Manuel loves big ideas and ambitious projects. He believes in the explosive mix of grit, talent and optimism. He grows smart and talented teams through empowerment and autonomy, mentoring and inspiration, and let’s not forget, fun and passion.
+                            </p>
+                            <p>
+                                Manuel is a leading voice on information visualization and has spoken at 100+ conferences, universities and festivals across four continents, including TED, Lift, OFFF, Eyeo, Visualized, Ars Electronica, Harvard, MIT, Yale, Royal College of Art, NYU Tisch School of the Arts, ENSAD Paris, University of Amsterdam, MediaLab Prado Madrid. His talks have been watched by 3M+ people around the world and he has been featured in various magazines and newspapers, such as Wired, New York Times, Science, Nature, BusinessWeek, Creative Review, Fast Company, Forbes, Grafik magazine, Étapes, and El País.
+                            </p>
+                            <p>
+                                He is the author of three books translated into several languages. His latest, The Book of Circles: Visualizing Spheres of Knowledge (2017), covers 1,000 years of humanity's long-lasting obsession with all things circular.
+                            </p>
                         </div>
                     </div>
                     <div>
                         <p class="title title--secondary margin-bottom-medium-lg">About Topic</p>
                         <div class="text-box">
-                            <p>John helps leaders, entrepreneurs, and professional teams make better use of their time at work and become happier, more engaged humans. As a speaker and facilitator, he has worked with more than 200 of the world’s most important and innovative organizations, including Google, Harvard University, Slack, IDEO, and Netflix.</p>
+                            <p>
+
+                            </p>
                         </div>
 <!--                        <div class="speaker-item-wrapper__bottom">-->
 <!--                            <div class="talk-schedule">-->

@@ -46,7 +46,7 @@
                         <p class="title title--secondary margin-bottom-medium-lg">About Topic</p>
                         <div class="text-box">
                             <p>
-                                <strong>Getting Forms Right: From Checkboxes To Dropdowns</strong>
+                                <strong>Getting Started with Lean Experimentation</strong>
                             </p>
                             <p>
                                 Heard of Lean Startup but not sure how to apply the principles in your organization? The approach has becoming increasingly popular, but it can be hard to know where to get started, especially if you’re not in a true startup. In reality, the Lean Startup approach is a way to apply the scientific method across business decisions and product development to reduce risk, which can be helpful to any kind of organization.

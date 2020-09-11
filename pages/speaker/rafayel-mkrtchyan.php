@@ -37,15 +37,17 @@
                     <div>
                         <p class="title title--secondary margin-bottom-medium-lg">About Speaker</p>
                         <div class="text-box">
-                            <p>John Zeratsky is a veteran technology designer, keynote speaker, and the bestselling author of Sprint and Make Time.</p>
-                            <p>John helps leaders, entrepreneurs, and professional teams make better use of their time at work and become happier, more engaged humans. As a speaker and facilitator, he has worked with more than 200 of the world’s most important and innovative organizations, including Google, Harvard University, Slack, IDEO, and Netflix.</p>
-                            <p>John has reached millions with his writing about resetting the defaults of busyness and distraction. He’s written two bestselling books and published articles in The Wall Street Journal, TIME, Harvard Business Review, Wired, Fast Company, and many other outlets.</p>
+                            <p>
+
+                            </p>
                         </div>
                     </div>
                     <div>
                         <p class="title title--secondary margin-bottom-medium-lg">About Topic</p>
                         <div class="text-box">
-                            <p>John helps leaders, entrepreneurs, and professional teams make better use of their time at work and become happier, more engaged humans. As a speaker and facilitator, he has worked with more than 200 of the world’s most important and innovative organizations, including Google, Harvard University, Slack, IDEO, and Netflix.</p>
+                            <p>
+
+                            </p>
                         </div>
 <!--                        <div class="speaker-item-wrapper__bottom">-->
 <!--                            <div class="talk-schedule">-->
