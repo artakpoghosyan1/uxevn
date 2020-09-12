@@ -19,6 +19,27 @@ $className = '';
 //        $className = 'dark-theme';
 //    }
 
+
+    if($page=='speaker/geff-gothelf' || $page=='speaker/david-m-hogue' || $page=='speaker/ani-avanian'
+        || $page=='speaker/manuel-lima' || $page=='speaker/vitaly-friedman' || $page=='speaker/amanda-stockwell'
+        || $page=='speaker/anna-vasyukova' || $page=='speaker/rafayel-mkrtchyan') {
+        $headerTitle = 'Speakers';
+    }
+    elseif ( $page=='workshop/vitaly-friedman' || $page=='workshop/amanda-stockwell') {
+        $headerTitle = 'Workshops';
+    }
+    elseif ($page=='code-of-conduct') {
+        $headerTitle = 'Code of conduct';
+    }
+    elseif ($page=='terms-and-conditions') {
+        $headerTitle = 'Terms and conditions';
+    }
+    elseif ($page=='privacy-policy') {
+        $headerTitle = 'Privacy policy';
+    }
+    elseif ($page=='purchase') {
+        $headerTitle = 'Purchase';
+    }
 ?>
 
 <!DOCTYPE html>

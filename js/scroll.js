@@ -22,8 +22,9 @@ $(window).scroll(function(event) {
 
     $('.header .menu-list a').each(function() {
         var curLink = $(this);
-
         var refElement = $(curLink.attr('href'));
+        var headerTitle = document.getElementById('headerTitle').firstChild;
+
 
         if (refElement.position().top <= scrollPos + 60) {
             $('.header .menu-list a').removeClass('active');
@@ -37,8 +38,9 @@ $(window).scroll(function(event) {
             }
 
             if ($(window).width() < 993) {
-                if (curLink.attr('href') === '#aboutSection' || curLink.attr('href') === '#workshopSection'
-                        || curLink.attr('href') === '#sponsorSection') {
+                if (curLink.attr('href') === '#aboutSection'
+                    || curLink.attr('href') === '#workshopSection'
+                    || curLink.attr('href') === '#sponsorSection') {
                     $('.page-wrapper').addClass('dark-theme');
                     $('.page-wrapper').removeClass('main-page');
                 }
@@ -47,22 +49,50 @@ $(window).scroll(function(event) {
                 }
             }
 
+
+            if (curLink.attr('href') === '#aboutSection') {
+                headerTitle.innerHTML = 'About us';
+            }
+            else if (curLink.attr('href') === '#speakersSection') {
+                headerTitle.innerHTML = 'Speakers';
+            }
+            else if (curLink.attr('href') === '#workshopSection') {
+                headerTitle.innerHTML = 'Workshops';
+            }
+            else if (curLink.attr('href') === '#scheduleSection') {
+                headerTitle.innerHTML = 'Schedule';
+            }
+            else if (curLink.attr('href') === '#sponsorSection') {
+                headerTitle.innerHTML = 'Sponsors';
+            }
+            else if (curLink.attr('href') === '#faqSection') {
+                headerTitle.innerHTML = 'Faq';
+            }
+            else if (curLink.attr('href') === '#contactSection') {
+                headerTitle.innerHTML = 'Contact us';
+            }
+
         } else {
             curLink.removeClass('active');
         }
+
     });
 
-    // $('a.def-button').each(function() {
-    //     var curLink = $(this);
-    //     var refElement = $(curLink.attr('href'));
-    //
-    //     if (refElement.position().top <= scrollPos + 60) {
-    //         if ($(window).width() < 993) {
-    //             if (curLink.attr('href') === '#buyTicketSection') {
-    //                 $('.page-wrapper').addClass('dark-theme');
-    //             }
-    //         }
-    //     }
-    // });
+    $('a.def-button').each(function() {
+        var curLink = $(this);
+        var refElement = $(curLink.attr('href'));
+        var headerTitle = document.getElementById('headerTitle').firstChild;
+
+        if (refElement.position().top <= scrollPos + 60) {
+            if (curLink.attr('href') === '#buyTicketSection') {
+                headerTitle.innerHTML = 'Buy tickets';
+            }
+            if ($(window).width() < 993) {
+                if (curLink.attr('href') === '#buyTicketSection') {
+                    $('.page-wrapper').addClass('dark-theme');
+                }
+            }
+        }
+    });
 });
 

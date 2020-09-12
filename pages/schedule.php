@@ -289,29 +289,29 @@
                             <div class="contact-list__row" data-aos="fade-up" data-aos-offset="80">
                                 <span  class="contact-list__icon icon--first"><i class="icon-time"></i></span>
                                 <span  class="contact-list__info">
-                                    <span class="contact-list__label">Armenia</span>
-                                    <span class="contact-list__text">5:15 - 6:15 PM GMT +4</span>
+                                    <span class="contact-list__label">Yerevan</span>
+                                    <span class="contact-list__text">4:00 PM / GMT+4</span>
                                 </span>
                             </div>
                             <div class="contact-list__row" data-aos="fade-up" data-aos-offset="110">
                                 <span  class="contact-list__icon icon--second"><i class="icon-time"></i></span>
                                 <span  class="contact-list__info">
-                                    <span class="contact-list__label">Europe</span>
-                                    <span class="contact-list__text">5:15 - 6:15 PM GMT +4</span>
+                                    <span class="contact-list__label">London</span>
+                                    <span class="contact-list__text">1:00 PM / GMT+1</span>
                                 </span>
                             </div>
                             <div class="contact-list__row" data-aos="fade-up" data-aos-offset="140">
                                 <span  class="contact-list__icon icon--third"><i class="icon-time"></i></span>
                                 <span  class="contact-list__info">
-                                    <span class="contact-list__label">Asia</span>
-                                    <span class="contact-list__text">5:15 - 6:15 PM GMT +4</span>
+                                    <span class="contact-list__label">New York</span>
+                                    <span class="contact-list__text">8:00 AM / GMT-4</span>
                                 </span>
                             </div>
                             <div class="contact-list__row" data-aos="fade-up" data-aos-offset="170">
                                 <span  class="contact-list__icon icon--fourth"><i class="icon-time"></i></span>
                                 <span  class="contact-list__info">
-                                    <span class="contact-list__label">The USA</span>
-                                    <span class="contact-list__text">5:15 - 6:15 PM GMT +4</span>
+                                    <span class="contact-list__label">Hong Kong</span>
+                                    <span class="contact-list__text">8:00 PM / GMT+8</span>
                                 </span>
                             </div>
                         </div>

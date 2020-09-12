@@ -3530,18 +3530,20 @@ sup {
     font-size: 62px;
     line-height: 0;
     padding-right: 20px; }
+    .contact-list__icon i {
+      display: block; }
     .contact-list__icon.icon--second i {
-      -ms-transform: rotate(90deg);
-      -webkit-transform: rotate(90deg);
-      transform: rotate(90deg); }
+      -ms-transform: rotate(-80deg);
+      -webkit-transform: rotate(-80deg);
+      transform: rotate(-80deg); }
     .contact-list__icon.icon--third i {
-      -ms-transform: rotate(-126deg);
-      -webkit-transform: rotate(-126deg);
-      transform: rotate(-126deg); }
+      -ms-transform: rotate(100deg);
+      -webkit-transform: rotate(100deg);
+      transform: rotate(100deg); }
     .contact-list__icon.icon--fourth i {
-      -ms-transform: rotate(-90deg);
-      -webkit-transform: rotate(-90deg);
-      transform: rotate(-90deg); }
+      -ms-transform: rotate(100deg);
+      -webkit-transform: rotate(100deg);
+      transform: rotate(100deg); }
   .contact-list__info > span {
     display: block; }
   .contact-list__label {

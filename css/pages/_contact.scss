@@ -95,20 +95,24 @@
     line-height: 0;
     padding-right: 20px;
 
+    i {
+      display: block;
+    }
+
     &.icon {
       &--second {
         i {
-          @include transform(rotate(90deg));
+          @include transform(rotate(-80deg));
         }
       }
       &--third {
         i {
-          @include transform(rotate(-126deg));
+          @include transform(rotate(100deg));
         }
       }
       &--fourth {
         i {
-          @include transform(rotate(-90deg));
+          @include transform(rotate(100deg));
         }
       }
     }

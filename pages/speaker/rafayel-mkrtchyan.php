@@ -38,12 +38,15 @@
                         <p class="title title--secondary margin-bottom-medium-lg">About Speaker</p>
                         <div class="text-box">
                             <p>
-
+                                Rafayel Mkrtchyan is a product management consultant who helps companies improve their product discovery and delivery processes. He teaches teams how to set up a winning product strategy, run customer and product development processes, as well as robust their lean, agile, outcome-driven, and design thinking skills.
+                            </p>
+                            <p>
+                                He is the co-founder and Chief Product Officer at PlayEngine - an all-in-one business management software for sports betting companies. Rafayel was selected as one of the HIVE 30 Under 30 Armeniansin Tech (2020) honorees for co-founding PlayEngine and contributing to the development of product culture in Armenia.
                             </p>
                         </div>
                     </div>
                     <div>
-                        <p class="title title--secondary margin-bottom-medium-lg">About Topic</p>
+<!--                        <p class="title title--secondary margin-bottom-medium-lg">About Topic</p>-->
                         <div class="text-box">
                             <p>
 

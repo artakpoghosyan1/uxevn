@@ -38,7 +38,7 @@
                         <p class="title title--secondary margin-bottom-medium-lg">About Speaker</p>
                         <div class="text-box">
                             <p>
-
+                                Dave combines his skills as a designer and applied psychologist to bring deeper insight into users' behaviors and motivations when interacting with digital products and services. He currently leads an enterprise UX team for Android at Google with an emphasis on data analysis and visualization, complex workflows, and machine learning. He teaches information design, interaction design, and advanced UX courses at San Francisco State University, is a LinkedIn author, has published articles and tutorials on design methods and tools, and regularly speaks and conducts workshops at conferences and professional UX events.
                             </p>
                         </div>
                     </div>
@@ -46,7 +46,10 @@
                         <p class="title title--secondary margin-bottom-medium-lg">About Topic</p>
                         <div class="text-box">
                             <p>
-
+                                Design is often perceived as subjective creation and decision-making, but great design is rigorous and has strong methods applied in systematic ways. Like experimental science, design is the systematic exploration of a problem-space to yield a deep understanding that guides us toward practical, elegant insights and solutions. Scientific methods and design thinking have much in common.
+                            </p>
+                            <p>
+                                We can create better products, services, and experiences by taking a scientific approach and applying core psychological principles and theories to identify, define, and frame problems more effectively. We will discuss a model of perception, cognition, motivation, emotion, and behavior to help us understand a wide range of diverse challenges that go beyond interface design and interaction to include context, communication, culture, humor, and more.
                             </p>
                         </div>
 <!--                        <div class="speaker-item-wrapper__bottom">-->

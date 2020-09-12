@@ -41,7 +41,7 @@
         <?php include('speakers.php'); ?>
     </div>
 </section>
-<section class="wrapper-section wrapper-section--secondary" id="workshopSection">
+<section class="wrapper-section wrapper-section--secondary bg-light" id="workshopSection">
     <div class="wrapper-section__inner">
         <div class="wrapper-section__top">
             <h1 class="title title--primary" data-aos="fade-up">Workshops</h1>

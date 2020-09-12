@@ -2,7 +2,7 @@
     <div class="header__inner">
         <div class="header__top">
             <div class="logo text-center"><a href="/#homeSection" class="scroll-page"><i class="icon-logo"></i> </a></div>
-            <div class="header__title"><span>our mission</span></div>
+            <div class="header__title" id="headerTitle"><span><?=$headerTitle?></span></div>
             <div class="header__date"><span>22</span>/<span>23</span></div>
         </div>
         <div class="header__nav">
