@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: primary;
   src: url("../fonts/proxima-nova/ProximaNova-Regular.ttf") format("truetype"); }
@@ -1889,7 +1890,7 @@ h1, h2, h3, h4, h5, h6 {
     .cursor {
       display: block; } }
   .cursor--drag {
-    background-image: url(../images/cursor-drag.png);
+    background-image: url(../images/cursor-drag.svg);
     width: 75px;
     height: 75px; }
 
@@ -3308,7 +3309,7 @@ sup {
 .payment-info {
   position: sticky;
   top: 80px; }
-  .payment-info--dynamic .payment-info__row span {
+  .payment-info--dynamic .payment-info__row > span {
     opacity: 50%; }
   .payment-info--dynamic .payment-info__row--highlighted span {
     opacity: 1; }
@@ -3473,6 +3474,13 @@ sup {
         padding-left: 0;
         text-align: left;
         margin-top: 8px; } }
+.currency-usd:after {
+  content: "$"; }
+.currency-amd:after {
+  content: "դր"; }
+.currency-usd, .currency-amd {
+  font-family: primary-bold; }
+
 /* Contact page */
 .contact-wrapper__inner {
   max-width: initial;

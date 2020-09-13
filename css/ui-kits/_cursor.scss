@@ -15,7 +15,7 @@
   }
 
   &--drag {
-    background-image: url(#{$mainImagePath}/cursor-drag.png);
+    background-image: url(#{$mainImagePath}/cursor-drag.svg);
     width: 75px;
     height: 75px;
   }

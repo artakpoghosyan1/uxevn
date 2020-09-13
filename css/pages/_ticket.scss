@@ -273,7 +273,7 @@
 
   &--dynamic {
     .payment-info__row {
-      span {
+      & > span {
         opacity: 50%;
       }
 
@@ -585,5 +585,22 @@
         }
       }
     }
+  }
+}
+
+.currency {
+  &-usd {
+    &:after {
+      content: '$'
+    }
+  }
+  &-amd {
+    &:after {
+      content: 'դր'
+    }
+  }
+
+  &-usd, &-amd {
+    font-family: primary-bold;
   }
 }
