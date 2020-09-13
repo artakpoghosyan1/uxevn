@@ -8,11 +8,11 @@
                     <p class="about-workshop__subtitle" data-aos="fade-up" data-aos-delay="140">Smart Interface Design Patterns (94% happiness rate)</p>
                     <div class="about-workshop__text" data-aos="fade-up" data-aos-delay="160">
                         <p>
-                            “Are you ready for a design challenge? In this series of online workshops, Vitaly Friedman, creative lead and front-end/UI designer behind Smashing Magazine, will be taking a microscopic examination of common components and...
+                            “Are you ready for a design challenge? In this series of online workshops, Vitaly Friedman, creative lead and front-end/UI designer behind Smashing Magazine, will be taking a microscopic examination of ...
                         </p>
                     </div>
                     <p data-aos="fade-up" data-aos-delay="220">
-                        <a href="index.php?page=workshop/vitaly-friedman" class="view-more">
+                        <a href="/workshop/vitaly-friedman" class="view-more">
                             <span class="view-more__text">view more</span>
                             <span class="view-more__icon"><i class="icon-next"></i></span>
                         </a>
@@ -30,7 +30,7 @@
                         </p>
                     </div>
                     <p data-aos="fade-up" data-aos-delay="220">
-                        <a href="index.php?page=workshop/amanda-stockwell" class="view-more">
+                        <a href="/workshop/amanda-stockwell" class="view-more">
                             <span class="view-more__text">view more</span>
                             <span class="view-more__icon"><i class="icon-next"></i></span>
                         </a>

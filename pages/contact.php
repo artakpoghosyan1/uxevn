@@ -87,7 +87,7 @@
                         </div>
                         <div class="form__row" data-aos="fade-right" data-aos-offset="290">
                             <div class="def-input def-input--secondary">
-                                <span class="def-input__label">Email</span>
+                                <span class="def-input__label">Email address</span>
                                 <input type="email" placeholder="your@mail.com " value="" required/>
                                 <span></span>
                             </div>
@@ -110,7 +110,7 @@
                         </div>
                         <div class="contact-list__row" data-aos="fade-right" data-aos-offset="30">
                             <span class="contact-list__info">
-                                <span class="contact-list__label">Design by</span>
+                                <span class="contact-list__label">Motion Design by</span>
                                 <span class="contact-list__text">
                                     <a href="https://www.linkedin.com/" target="_blank">Daniel Tumanyan</a>
                                 </span>

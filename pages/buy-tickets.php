@@ -85,7 +85,7 @@
                                             <input type="text" placeholder="Enter Discount Code"/>
                                             <span></span>
                                         </div>
-                                        <button class="def-button def-button--simple" data-aos="fade-up" data-aos-offset="120" onclick="window.open('index.php?page=purchase', '_self')">Submit</button>
+                                        <button class="def-button def-button--simple" data-aos="fade-up" data-aos-offset="120" onclick="window.open('/purchase', '_self')">Submit</button>
                                     </div>
                                 </div>
                             </div>

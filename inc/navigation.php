@@ -38,11 +38,11 @@
             <div class="navigation__bottom hide-for-mobile">
                 <ul class="info-list">
                     <li><a href="mailto:hello@uxevn.com">hello@uxevn.com</a></li>
-                    <li><a href="index.php?page=code-of-conduct">Code of conduct</a></li>
-                    <li><a href="index.php?page=privacy-policy">Privacy and policy</a></li>
+                    <li><a href="/code-of-conduct">Code of conduct</a></li>
+                    <li><a href="/terms-and-conditions">Terms & Conditions</a></li>
                 </ul>
                 <span class="navigation__terms">
-                    <span><a href="index.php?page=terms-and-conditions" class="underline-hover">Terms & Conditions</a>: Tickets are non-refundable but transferable.</span>
+                    <span><a href="/terms-and-conditions" class="underline-hover">Terms & Conditions</a>: Tickets are non-refundable but transferable.</span>
                     <span>Design2Science reserves the right to cancel or replace speakers.</span>
                 </span>
              </div>

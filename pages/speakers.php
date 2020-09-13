@@ -11,7 +11,7 @@
                     </div>
                     <div class="speaker-box__info" data-aos="fade-up" data-aos-offset="20">
                         <div>
-                            <a href="index.php?page=speaker/geff-gothelf" class="speaker-box__link">
+                            <a href="/speaker/geff-gothelf" class="speaker-box__link">
                                 <span class="speaker-box__name">JEFF GOTHELF</span>
                                 <span class="speaker-box__position">Author of Forever Employable Co-author of Lean UX and Sense & Respond</span>
                             </a>
@@ -31,7 +31,7 @@
                     </div>
                     <div class="speaker-box__info" data-aos="fade-up" data-aos-offset="40">
                         <div>
-                            <a href="index.php?page=speaker/david-m-hogue" class="speaker-box__link">
+                            <a href="/speaker/david-m-hogue" class="speaker-box__link">
                                 <span class="speaker-box__name">David M. Hogue, PH.D.</span>
                                 <span class="speaker-box__position">Design Lead <br/>at Google</span>
                             </a>
@@ -51,7 +51,7 @@
                     </div>
                     <div class="speaker-box__info" data-aos="fade-up" data-aos-offset="60">
                         <div>
-                            <a href="index.php?page=speaker/ani-avanian" class="speaker-box__link">
+                            <a href="/speaker/ani-avanian" class="speaker-box__link">
                                 <span class="speaker-box__name">Ani Avanian</span>
                                 <span class="speaker-box__position">Product Design Manager <br/>at Facebook</span>
                             </a>
@@ -71,7 +71,7 @@
                     </div>
                     <div class="speaker-box__info" data-aos="fade-up" data-aos-offset="80">
                         <div>
-                            <a href="index.php?page=speaker/manuel-lima" class="speaker-box__link">
+                            <a href=/speaker/manuel-lima" class="speaker-box__link">
                                 <span class="speaker-box__name">Manuel Lima</span>
                                 <span class="speaker-box__position">Head of Google Cloud <br/>Datavis</span>
                             </a>
@@ -92,7 +92,7 @@
                     </div>
                     <div class="speaker-box__info" data-aos="fade-up" data-aos-offset="20">
                         <div>
-                            <a href="index.php?page=speaker/vitaly-friedman" class="speaker-box__link">
+                            <a href="/speaker/vitaly-friedman" class="speaker-box__link">
                                 <span class="speaker-box__name">Vitaly Friedman</span>
                                 <span class="speaker-box__position">Co-Founder and Editor-in-Chief <br/>of Smashing Magazine</span>
                             </a>
@@ -112,7 +112,7 @@
                     </div>
                     <div class="speaker-box__info" data-aos="fade-up" data-aos-offset="40">
                         <div>
-                            <a href="index.php?page=speaker/amanda-stockwell" class="speaker-box__link">
+                            <a href="/speaker/amanda-stockwell" class="speaker-box__link">
                                 <span class="speaker-box__name">Amanda Stockwell</span>
                                 <span class="speaker-box__position">President and Principal <br/>Researcher</span>
                             </a>
@@ -132,7 +132,7 @@
                     </div>
                     <div class="speaker-box__info" data-aos="fade-up" data-aos-offset="60">
                         <div>
-                            <a href="index.php?page=speaker/anna-vasyukova" class="speaker-box__link">
+                            <a href="/speaker/anna-vasyukova" class="speaker-box__link">
                                 <span class="speaker-box__name">Anna Vasyukova</span>
                                 <span class="speaker-box__position">Lead UX Designer <br/>at Circa / UX Tutor at ACA</span>
                             </a>
@@ -155,7 +155,7 @@
                     </div>
                     <div class="speaker-box__info" data-aos="fade-up" data-aos-offset="80">
                         <div>
-                            <a href="index.php?page=speaker/rafayel-mkrtchyan" class="speaker-box__link">
+                            <a href="/speaker/rafayel-mkrtchyan" class="speaker-box__link">
                                 <span class="speaker-box__name">Rafayel Mkrtchyan</span>
                                 <span class="speaker-box__position">Design2Science Host</span>
                             </a>

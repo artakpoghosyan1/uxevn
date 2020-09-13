@@ -56,7 +56,7 @@
                 <div class="contact-list__row flex--wrap">
                     <div class="contact-list__col">
                       <span class="contact-list__info" data-aos="fade-up" data-aos-offset="170">
-                        <span class="contact-list__label">EMAIL</span>
+                        <span class="contact-list__label">EMAIL Us</span>
                         <span class="contact-list__text"><a href="mailto:hello@uxevn.com">hello@uxevn.com</a></span>
                      </span>
                     </div>

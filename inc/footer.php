@@ -45,7 +45,7 @@
                         <div class="form__col flex__item">
                             <div class="def-input def-input--secondary">
                                 <input type="text" placeholder="" value=""/>
-                                <span class="def-input__label">Email</span>
+                                <span class="def-input__label">Email address</span>
                             </div>
                         </div>
                     </div>

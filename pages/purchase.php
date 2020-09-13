@@ -274,7 +274,7 @@
                         <div class="form__row flex flex--wrap">
                             <div class="form__col">
                                 <div class="def-input" data-aos="fade-up" data-aos-offset="90">
-                                    <span class="def-input__label">Email</span>
+                                    <span class="def-input__label">Email address</span>
                                     <input type="text" placeholder="name@website.com" value="" required/>
                                     <span></span>
                                 </div>
@@ -291,7 +291,7 @@
                             <label class="def-checkbox">
                                 <input type="checkbox" name=""/>
                                 <span><i class="icon-check"></i></span>
-                                <span class="def-checkbox__text">I agree to the Design2Science <a href="index.php?page=terms-and-conditions" class="link link--blue">Terms & Conditions</a></span>
+                                <span class="def-checkbox__text">I agree to the Design2Science <a href="/terms-and-conditions" class="link link--blue">Terms & Conditions</a></span>
                             </label>
                         </div>
                         <div class="form__row">
