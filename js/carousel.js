@@ -101,13 +101,14 @@ $(document).ready(function() {
 
     $('.twits-carousel').slick({
         dots: false,
-        speed: 300,
         autoplay: true,
-        infinite: false,
-        swipeToSlide: true,
+        autoplaySpeed: 0,
+        speed: 10000,
+        cssEase: 'linear',
+        infinite: true,
         arrows: false,
         slidesToShow: 2.5,
-        slidesToScroll: 1,
+        slide: "",
         responsive: [
             {
                 breakpoint: 769,
