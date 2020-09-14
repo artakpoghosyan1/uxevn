@@ -3478,9 +3478,56 @@ sup {
   content: "$"; }
 .currency-amd:after {
   content: "դր"; }
-.currency-usd, .currency-amd {
+.currency-usd:after, .currency-amd:after {
   font-family: primary-bold; }
 
+.ticket-block__row {
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid rgba(14, 22, 44, 0.1); }
+  .ticket-block__row:last-child {
+    border-bottom-width: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    margin-top: 40px; }
+  .ticket-block__row--disabled {
+    position: relative; }
+    .ticket-block__row--disabled:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.3);
+      z-index: 10; }
+.ticket-block__item {
+  margin-bottom: 40px; }
+  .ticket-block__item:last-child {
+    margin-bottom: 0; }
+.ticket-block__title {
+  font-size: 24px;
+  font-family: primary-bold;
+  color: #4873EC;
+  margin-bottom: 30px;
+  text-transform: uppercase; }
+.ticket-block__discount {
+  margin-top: 30px;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .ticket-block__discount .error-message {
+    flex: 100%;
+    margin-top: 10px; }
+  .ticket-block__discount .def-input {
+    flex: 1; }
+  .ticket-block__discount button {
+    height: initial; }
+
+@media (min-width: 577px) {
+  .ticket-block__discount .error-message {
+    order: 2; } }
 /* Contact page */
 .contact-wrapper__inner {
   max-width: initial;
